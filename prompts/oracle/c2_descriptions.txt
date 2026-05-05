@@ -1,0 +1,10 @@
+# Condition C2 — parent problem + milestone descriptions (no answers)
+
+Template:
+    {parent_prompt}
+
+    Hint — the following sub-goals structure the solution:
+    Sub-goal 1: {milestones[0].description}
+
+    Sub-goal 2: {milestones[1].description}
+    ...

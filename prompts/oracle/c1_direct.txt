@@ -1,0 +1,6 @@
+# Condition C1 — direct solving
+
+The user message is the parent problem verbatim. No additional scaffolding.
+
+Template (plain Python f-string):
+    {parent_prompt}

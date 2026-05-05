@@ -1,0 +1,9 @@
+# Condition C2-random — parent problem + milestones from a DIFFERENT family
+
+Matches the C2-descriptions shape exactly, but the descriptions come from an
+unrelated parent problem (same count, randomly sampled to ensure no structural
+overlap). Tests whether C2-description lift depends on alignment or is a
+generic prompt-scaffolding effect.
+
+Template identical to c2_descriptions.txt, with `milestones` replaced by a
+random other-family's milestones.

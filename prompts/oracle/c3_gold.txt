@@ -1,0 +1,14 @@
+# Condition C3 — parent problem + milestone descriptions + gold answers
+
+Template:
+    {parent_prompt}
+
+    The following sub-goals have been solved:
+    Sub-goal 1: {milestones[0].description}
+      Answer: {milestones[0].answer}
+
+    Sub-goal 2: {milestones[1].description}
+      Answer: {milestones[1].answer}
+    ...
+
+    Use these results to solve the original problem.

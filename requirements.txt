@@ -1,0 +1,23 @@
+# Python >=3.10 required (the verifier uses dataclass(slots=...))
+# Install: pip install -r requirements.txt
+
+# Core
+sympy>=1.12
+numpy>=1.24
+pandas>=2.0
+PyYAML>=6.0
+pydantic>=2.0
+
+# Verifier cascade
+math-verify>=0.5
+
+# Croissant validation
+mlcroissant>=1.0
+
+# Plotting (only needed for figure-reproduction scripts)
+matplotlib>=3.7
+
+# Teacher / student LLM clients (only needed if you re-run the pipeline
+# end-to-end against an external model API; the released panel outputs
+# do not require these to be installed for inspection)
+openai>=1.0

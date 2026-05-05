@@ -1,0 +1,14 @@
+# Condition C2-generic — parent problem + GENERIC "break into steps" boilerplate
+
+Template:
+    {parent_prompt}
+
+    Hint — to solve this problem, consider the following approach:
+    1. Identify the key mathematical concepts and relationships involved.
+    2. Break the problem into smaller, manageable sub-steps.
+    3. Solve each sub-step carefully, checking your work.
+    4. Combine the results to reach the final answer.
+
+This tests whether any kind of structured prompting (without problem-specific
+content) is enough to produce lift. If C2-descriptions lifts above C2-generic,
+the effect is tied to aligned content rather than generic scaffolding.

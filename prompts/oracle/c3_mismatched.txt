@@ -1,0 +1,18 @@
+# Condition C3-mismatched — correct descriptions, WRONG answers
+
+Matches C3-gold in shape, but the answers come from mismatched (unrelated)
+sub-goals. Tests that C3-gold lift depends on correct alignment, not just
+the presence of answer-shaped strings.
+
+Template (plain Python f-string):
+    {parent_prompt}
+
+    The following sub-goals have been solved:
+    Sub-goal 1: {milestones[0].description}
+      Answer: {wrong_answers[0]}
+
+    Sub-goal 2: {milestones[1].description}
+      Answer: {wrong_answers[1]}
+    ...
+
+    Use these results to solve the original problem.
