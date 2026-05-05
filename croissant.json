@@ -83,7 +83,7 @@
       "name": "diagnostic_354_families.jsonl",
       "description": "Main diagnostic set: 354 milestone families with parent problems, gold answers, typed milestones, and pre-RL Qwen-base milestone solve rates.",
       "encodingFormat": "application/jsonlines",
-      "contentUrl": "data/diagnostic_354_families.jsonl",
+      "contentUrl": "https://anonymous.4open.science/r/milestone-oracle-diagnostic-E03C/data/diagnostic_354_families.jsonl",
       "sha256": "aebb9a4bd5ba9699d368ed6ee38040b69ee714b7ef6d999b1123d52fa3b014ab"
     },
     {
@@ -92,7 +92,7 @@
       "name": "diagnostic_731_compiled.jsonl",
       "description": "Pre-restriction 731-family compiled set kept for provenance.",
       "encodingFormat": "application/jsonlines",
-      "contentUrl": "data/diagnostic_731_compiled.jsonl",
+      "contentUrl": "https://anonymous.4open.science/r/milestone-oracle-diagnostic-E03C/data/diagnostic_731_compiled.jsonl",
       "sha256": "a5e0448e503c3b2df148c2ecc1efc55a9f62348a4454d84b640f62b4e5f4fb39"
     },
     {
@@ -101,7 +101,7 @@
       "name": "diagnostic_held_out_32.jsonl",
       "description": "32-family held-out slice compiled from a disjoint 150-parent NuminaMath sample.",
       "encodingFormat": "application/jsonlines",
-      "contentUrl": "data/diagnostic_held_out_32.jsonl",
+      "contentUrl": "https://anonymous.4open.science/r/milestone-oracle-diagnostic-E03C/data/diagnostic_held_out_32.jsonl",
       "sha256": "05e7d7e3405bdef7560005fef4fb287921aea5f0294f7bd2494e6caaba223b04"
     },
     {
@@ -110,7 +110,7 @@
       "name": "oracle_panel_16k",
       "description": "Per-(model, condition, family) parent-probe correctness counts for the six-model panel at max_tokens=16384 with K=8 rollouts per cell. One file per model.",
       "encodingFormat": "application/jsonlines",
-      "includes": "data/oracle_panel_16k/*.jsonl"
+      "includes": "https://anonymous.4open.science/r/milestone-oracle-diagnostic-E03C/data/oracle_panel_16k/*.jsonl"
     },
     {
       "@type": "cr:FileObject",
@@ -118,7 +118,7 @@
       "name": "audit_consensus.jsonl",
       "description": "100-family unrecovered audit: consensus rubric category per family, plus per-rater labels.",
       "encodingFormat": "application/jsonlines",
-      "contentUrl": "data/audit_consensus.jsonl",
+      "contentUrl": "https://anonymous.4open.science/r/milestone-oracle-diagnostic-E03C/data/audit_consensus.jsonl",
       "sha256": "f6fe6a6036e5c9773872cfb2745570186e96056b6d37d68cfe3455c0e55b918d"
     },
     {
@@ -127,7 +127,7 @@
       "name": "audit_rater_a.jsonl",
       "description": "Per-family rubric labels from rater A.",
       "encodingFormat": "application/jsonlines",
-      "contentUrl": "data/audit_rater_a.jsonl",
+      "contentUrl": "https://anonymous.4open.science/r/milestone-oracle-diagnostic-E03C/data/audit_rater_a.jsonl",
       "sha256": "17d5bbee2c26bc43171a65f9e73b834b87c53d1344d94830aa1d569d58862a51"
     },
     {
@@ -136,7 +136,7 @@
       "name": "audit_rater_b.jsonl",
       "description": "Per-family rubric labels from rater B.",
       "encodingFormat": "application/jsonlines",
-      "contentUrl": "data/audit_rater_b.jsonl",
+      "contentUrl": "https://anonymous.4open.science/r/milestone-oracle-diagnostic-E03C/data/audit_rater_b.jsonl",
       "sha256": "b07d578193b31972d5686cbe3935074df5fb1dfd38d57571e080e80cedba0636"
     },
     {
@@ -145,7 +145,7 @@
       "name": "oracle_leak_safe_repair.jsonl",
       "description": "Oracle re-evaluation of decomposition-incomplete families after leak-safe repair (45 of 50 attempted; the 5 that fail leak-safe condition (1) are excluded).",
       "encodingFormat": "application/jsonlines",
-      "contentUrl": "data/oracle_leak_safe_repair.jsonl",
+      "contentUrl": "https://anonymous.4open.science/r/milestone-oracle-diagnostic-E03C/data/oracle_leak_safe_repair.jsonl",
       "sha256": "1e448a7c6170efc3d52e38a0173f78934f8deefea8860e74f6826148ff52e361"
     },
     {
@@ -154,7 +154,7 @@
       "name": "repaired_decomp_leak_safe.jsonl",
       "description": "Regenerated milestone families after leak-safe decomposition repair.",
       "encodingFormat": "application/jsonlines",
-      "contentUrl": "data/repaired_decomp_leak_safe.jsonl",
+      "contentUrl": "https://anonymous.4open.science/r/milestone-oracle-diagnostic-E03C/data/repaired_decomp_leak_safe.jsonl",
       "sha256": "ad35afb0e04effce70d015207091d8b690e64f907273ffa75b1e7fbeae96962d"
     },
     {
@@ -163,7 +163,7 @@
       "name": "repaired_verifier.jsonl",
       "description": "Verifier-repaired families (re-solved gold answer + canonical replacement) for the 26 verifier-artifact rubric category.",
       "encodingFormat": "application/jsonlines",
-      "contentUrl": "data/repaired_verifier.jsonl",
+      "contentUrl": "https://anonymous.4open.science/r/milestone-oracle-diagnostic-E03C/data/repaired_verifier.jsonl",
       "sha256": "5044c5e424413293f8ed1f273fb93b41df3dd9fe5501cb07c9be1b0368b2822f"
     }
   ],
@@ -173,7 +173,9 @@
       "@id": "milestone_family",
       "name": "milestone_family",
       "description": "One milestone family per record. The parent is a math problem; each milestone is a self-contained typed sub-goal with its own description, answer schema, and gold answer.",
-      "key": {"@id": "milestone_family/pid"},
+      "key": {
+        "@id": "milestone_family/pid"
+      },
       "field": [
         {
           "@type": "cr:Field",
@@ -182,8 +184,12 @@
           "description": "Stable family identifier (UUID).",
           "dataType": "sc:Text",
           "source": {
-            "fileObject": {"@id": "diagnostic_354_families.jsonl"},
-            "extract": {"column": "pid"}
+            "fileObject": {
+              "@id": "diagnostic_354_families.jsonl"
+            },
+            "extract": {
+              "column": "pid"
+            }
           }
         },
         {
@@ -193,8 +199,12 @@
           "description": "Verbatim student-facing parent problem prompt (with system-side boxed-answer instruction).",
           "dataType": "sc:Text",
           "source": {
-            "fileObject": {"@id": "diagnostic_354_families.jsonl"},
-            "extract": {"column": "parent_prompt"}
+            "fileObject": {
+              "@id": "diagnostic_354_families.jsonl"
+            },
+            "extract": {
+              "column": "parent_prompt"
+            }
           }
         },
         {
@@ -204,8 +214,12 @@
           "description": "Canonical gold answer for the parent problem (LaTeX string).",
           "dataType": "sc:Text",
           "source": {
-            "fileObject": {"@id": "diagnostic_354_families.jsonl"},
-            "extract": {"column": "parent_answer"}
+            "fileObject": {
+              "@id": "diagnostic_354_families.jsonl"
+            },
+            "extract": {
+              "column": "parent_answer"
+            }
           }
         },
         {
@@ -215,8 +229,12 @@
           "description": "Verifier acceptance note for the parent answer.",
           "dataType": "sc:Text",
           "source": {
-            "fileObject": {"@id": "diagnostic_354_families.jsonl"},
-            "extract": {"column": "parent_note"}
+            "fileObject": {
+              "@id": "diagnostic_354_families.jsonl"
+            },
+            "extract": {
+              "column": "parent_note"
+            }
           }
         }
       ]
@@ -234,8 +252,12 @@
           "description": "Panel model identifier.",
           "dataType": "sc:Text",
           "source": {
-            "fileSet": {"@id": "oracle_panel_16k"},
-            "extract": {"column": "model"}
+            "fileSet": {
+              "@id": "oracle_panel_16k"
+            },
+            "extract": {
+              "column": "model"
+            }
           }
         },
         {
@@ -245,8 +267,12 @@
           "description": "Probing condition: C1_direct, C2_descriptions, C3_gold_answers, C2_random, C2_generic, or C3_mismatched.",
           "dataType": "sc:Text",
           "source": {
-            "fileSet": {"@id": "oracle_panel_16k"},
-            "extract": {"column": "condition"}
+            "fileSet": {
+              "@id": "oracle_panel_16k"
+            },
+            "extract": {
+              "column": "condition"
+            }
           }
         },
         {
@@ -256,8 +282,12 @@
           "description": "Family identifier (joinable on milestone_family.pid).",
           "dataType": "sc:Text",
           "source": {
-            "fileSet": {"@id": "oracle_panel_16k"},
-            "extract": {"column": "pid"}
+            "fileSet": {
+              "@id": "oracle_panel_16k"
+            },
+            "extract": {
+              "column": "pid"
+            }
           }
         },
         {
@@ -267,8 +297,12 @@
           "description": "Number of correct rollouts out of K=8.",
           "dataType": "sc:Integer",
           "source": {
-            "fileSet": {"@id": "oracle_panel_16k"},
-            "extract": {"column": "n_correct"}
+            "fileSet": {
+              "@id": "oracle_panel_16k"
+            },
+            "extract": {
+              "column": "n_correct"
+            }
           }
         },
         {
@@ -278,8 +312,12 @@
           "description": "Total rollouts attempted (always 8 in this release).",
           "dataType": "sc:Integer",
           "source": {
-            "fileSet": {"@id": "oracle_panel_16k"},
-            "extract": {"column": "k"}
+            "fileSet": {
+              "@id": "oracle_panel_16k"
+            },
+            "extract": {
+              "column": "k"
+            }
           }
         }
       ]
