@@ -52,7 +52,7 @@
   "description": "A 354-family math-reasoning diagnostic for milestone-oracle probing. Each family pairs a parent math problem with a teacher-compiled set of typed, symbolically checkable milestones (intermediate sub-goals with gold answers). The dataset supports a judge-free diagnostic protocol that probes a student model under three help levels (no help / milestone roadmap / roadmap + gold milestone answers) and a Stage 0 milestone-test pass/fail check, yielding a five-state reasoning-gap taxonomy (roadmap, milestone-execution, composition, missing-milestone, capability). Source problems are derived from NuminaMath-1.5-RL-Verifiable; milestones are produced by GPT-5.4 with thinking mode enabled and validated by deterministic symbolic verification. Released alongside the paper 'Diagnosing Math-Reasoning Failure Structure with Milestone Oracles'.",
   "conformsTo": "http://mlcommons.org/croissant/1.0",
   "license": "https://creativecommons.org/licenses/by/4.0/",
-  "url": "https://anonymous.4open.science/r/milestone-oracle-diagnostic-E03C/",
+  "url": "https://anonymous.4open.science/r/milestone-oracle-diagnostic-E03C/README.md",
   "version": "1.0.0",
   "datePublished": "2026-05-07",
   "keywords": [
