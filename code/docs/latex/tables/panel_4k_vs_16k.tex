@@ -1,0 +1,22 @@
+\begin{table}[h]
+\centering
+\footnotesize
+\caption{Decoding-budget sensitivity: fingerprint at \texttt{max\_tokens=4096} vs.\ \texttt{max\_tokens=16384} on the same 354 families, $K{=}8$, same prompt, same verifier. Headers: \textsc{Direct}, \textsc{Roadmap-Needed}, \textsc{Answers-Needed}, \textbf{Any probe} ($= \textsc{Direct}+\textsc{Roadmap-Needed}+\textsc{Answers-Needed}$). Models trained with long reasoning chains (OutcomeRL-2K, MilestoneRL-2K, gpt-oss-20b, DeepSeek-V3.1) shift meaningfully at 16K; Qwen-base and Llama-3.3-70B-Instruct (neither RL-tuned on long chains in our setup) are stable within bootstrap noise.}
+\label{tab:panel_4k_vs_16k}
+\vspace{4pt}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrrrrrrrr}
+\toprule
+& \multicolumn{4}{c}{\textbf{4K}} & \multicolumn{4}{c}{\textbf{16K}} \\
+\cmidrule(lr){2-5} \cmidrule(lr){6-9}
+\textbf{Model} & \textsc{Direct} & \textsc{R-Need} & \textsc{A-Need} & \textbf{Any} & \textsc{Direct} & \textsc{R-Need} & \textsc{A-Need} & \textbf{Any} \\
+\midrule
+Qwen-base & 64 & 54 & 40 & 158 & 76 & 50 & 26 & 152 \\
+OutcomeRL-2K & 79 & 50 & 27 & 156 & 106 & 50 & 14 & 170 \\
+MilestoneRL-2K & 88 & 45 & 25 & 158 & 96 & 47 & 22 & 165 \\
+gpt-oss-20b & 114 & 34 & 27 & 175 & 161 & 36 & 17 & 214 \\
+Llama-70B & 54 & 48 & 26 & 128 & 52 & 46 & 28 & 126 \\
+DeepSeek-V3.1 & 85 & 40 & 16 & 141 & 143 & 33 & 7 & 183 \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,20 @@
+\begin{table}[h]
+\centering
+\scriptsize
+\caption{Pairwise ordering frequency on any-probe count: fraction of 1000 bootstrap resamples (family-level) where the row model's ceiling exceeds the column model's. Values near 0.5 indicate unstable order; values near 1.0 indicate stable dominance.}
+\label{tab:bootstrap_ordering}
+\vspace{4pt}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lcccccc}
+\toprule
+& pre-RL & Base-2k & Mile-2k & gpt-oss-20b & Llama-70B & DeepSeek-V3.1 \\
+\midrule
+pre-RL & --- & 0.01 & 0.02 & 0.00 & 1.00 & 0.00 \\
+Base-2k & 0.99 & --- & 0.81 & 0.00 & 1.00 & 0.10 \\
+Mile-2k & 0.97 & 0.15 & --- & 0.00 & 1.00 & 0.03 \\
+gpt-oss-20b & 1.00 & 1.00 & 1.00 & --- & 1.00 & 1.00 \\
+Llama-70B & 0.00 & 0.00 & 0.00 & 0.00 & --- & 0.00 \\
+DeepSeek-V3.1 & 1.00 & 0.89 & 0.96 & 0.00 & 1.00 & --- \\
+\bottomrule
+\end{tabular}
+\end{table}

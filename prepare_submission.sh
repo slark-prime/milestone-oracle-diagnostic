@@ -21,13 +21,24 @@ cd "$(dirname "$0")"
 OUT_TAR="../milestone-oracle-diagnostic-submission.tar.gz"
 OUT_ZIP="../milestone-oracle-diagnostic-submission.zip"
 
+# Remove any symlink-farm artifacts left behind by setup_release_paths.sh; we
+# do not want them in the submission archive (would duplicate data and bloat
+# the zip when symlinks are followed).
+rm -rf data/logs code/data 2>/dev/null || true
+
 # Tar.gz
+# --owner=0 --group=0 --numeric-owner strips real-user metadata so the archive
+# does not embed our local username/group (deanonymization risk).
+# --no-xattrs prevents macOS extended-attribute leakage (e.g., AppleDouble).
 tar --exclude='.git' --exclude='.DS_Store' --exclude='__pycache__' --exclude='*.pyc' \
+    --owner=0 --group=0 --numeric-owner --no-xattrs \
     -czf "$OUT_TAR" .
 
 # Zip (some reviewers prefer zip; -x excludes globs)
+# -y stores symlinks as symlinks rather than following; -X strips extra file
+# attributes (uid/gid, AppleDouble, etc.) for anonymity.
 rm -f "$OUT_ZIP"
-zip -r -q "$OUT_ZIP" . \
+zip -r -q -y -X "$OUT_ZIP" . \
     -x '.git/*' -x '*.DS_Store' -x '*__pycache__*' -x '*.pyc'
 
 echo "Wrote:"

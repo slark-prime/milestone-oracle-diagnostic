@@ -28,7 +28,7 @@ import figure_style as S
 
 REPO = Path(__file__).resolve().parent.parent
 PANEL_DIR = REPO / "data/logs/rl/oracle_panel_16k"
-STAGE0_DIR = REPO / "data/logs/rl/stage0_panel"
+STAGE0_DIR = REPO / "data/logs/rl/stage0_panel_16k"
 OUT_JSON = REPO / "data/logs/rl/bottleneck_lattice.json"
 OUT_FIG = REPO / "docs/latex/figures/bottleneck_lattice.pdf"
 OUT_TEX = REPO / "docs/latex/tables/bottleneck_lattice.tex"
@@ -243,7 +243,7 @@ def main():
     OUT_TEX.parent.mkdir(parents=True, exist_ok=True)
     with open(OUT_TEX, "w") as f:
         f.write("\\begin{table}[h]\n\\centering\n\\small\n")
-        f.write("\\caption{Reasoning-gap taxonomy: Stage 0 milestone test (pass/fail) $\\times$ smallest help needed to unlock the parent, per model on the 354-family diagnostic set. Counts are families. Stage 0 measured at \\texttt{max\\_tokens=4096} (auxiliary screening); parent probing conditions at \\texttt{max\\_tokens=16384}.}\n")
+        f.write("\\caption{Reasoning-gap taxonomy: Stage 0 milestone test (pass/fail) $\\times$ smallest help needed to unlock the parent, per model on the 354-family diagnostic set. Counts are families. Both Stage 0 and parent probing at \\texttt{max\\_tokens=16384}, $K{=}8$.}\n")
         f.write("\\label{tab:bottleneck_lattice}\n\\vspace{4pt}\n")
         f.write("\\setlength{\\tabcolsep}{4pt}\n")
         f.write("\\begin{tabular}{lrrrrrr}\n\\toprule\n")

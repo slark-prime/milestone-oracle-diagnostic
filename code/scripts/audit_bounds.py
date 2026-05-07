@@ -21,7 +21,10 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parent.parent
 
 AUDIT = REPO / "data/logs/rl/audit_consensus.jsonl"
-DECOMP = REPO / "data/logs/rl/repaired_decomp.jsonl"
+# Use the leak-safe repair file shipped in the release; the legacy name
+# repaired_decomp.jsonl is kept as a symlink alias by setup_release_paths.sh
+# but reading the leak-safe file directly avoids reviewer ambiguity.
+DECOMP = REPO / "data/logs/rl/repaired_decomp_leak_safe.jsonl"
 VERIFIER = REPO / "data/logs/rl/repaired_verifier.jsonl"
 ORACLE = REPO / "data/logs/rl/oracle_repaired.jsonl"
 

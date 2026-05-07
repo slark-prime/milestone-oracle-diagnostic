@@ -176,14 +176,25 @@ The figure / table reproduction scripts in `code/scripts/` are the exact ones we
 bash setup_release_paths.sh
 ```
 
-This creates a `data/logs/rl/` directory of symlinks pointing at the released files (and a `code/data` -> `../data` symlink so the `parent.parent`-relative `REPO` constant resolves correctly). After that, scripts run unmodified, e.g.
+This creates a `data/logs/rl/` directory of symlinks pointing at the released files (and a `code/data` -> `../data` symlink so the `parent.parent`-relative `REPO` constant resolves correctly).
 
-```bash
-python3 code/scripts/audit_bounds.py            # audit lower/upper bounds (Section 5.5)
-python3 code/scripts/build_bottleneck_lattice.py # bottleneck-lattice figure + JSON
-```
+**Scripts verified end-to-end on this release** (run after `setup_release_paths.sh`):
 
-The exact panel numbers behind every figure are also recoverable directly from the JSONL files using the parent-probe snippet at the top of this section.
+| Script | Paper artifact |
+|---|---|
+| `build_bottleneck_lattice.py` | Figure 4, Table 12 (reasoning-gap taxonomy) |
+| `build_two_arm_redistribution.py` | Figure 5 (longitudinal) |
+| `build_audit_triage_figure.py` | Figure 6 (audit triage) |
+| `audit_bounds.py` | Section 4.5 lower/upper-bound bookkeeping |
+| `build_4k_vs_16k_comparison.py` | Appendix L (decoding-budget audit) |
+| `build_trajectory_tomography.py` | Figure 8 (training trajectory) |
+| `build_accuracy_vs_recoverability_scatter.py` | Figure 3(b) inputs |
+| `bootstrap_fingerprint_cis.py` | Appendix F (fingerprint CIs) |
+| `analyze_format_audit.py` | Appendix L (format audit) |
+
+These nine scripts cover the headline figures and tables in the main text and the audit/budget appendices. The exact panel numbers behind every figure are also recoverable directly from the JSONL files using the parent-probe snippet at the top of this section.
+
+**Scripts that depend on intermediate artifacts not packaged here** (`manifest.jsonl`, `panel_fingerprints_16k.json`, `oracle_canonical.jsonl`, the 4K `oracle_panel/`, the 150-problem held-out source pool): `build_oracle_specificity.py`, `build_panel_figures_16k.py`, `build_specificity_decoupling.py`, `compute_bootstrap_cis.py`, `build_held_out_families.py`, `analyze_milestone_types.py`. These are reproducibility specifications; treat them as documentation of how the corresponding figures were built rather than as drop-in commands.
 
 ## Preparing a clean copy for submission
 
