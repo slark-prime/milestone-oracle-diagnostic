@@ -170,7 +170,30 @@ We have verified the following entry points end-to-end on this release:
    assert len(list(ds.records("oracle_panel_record"))) == 12_744
    ```
 
-The figure / table reproduction scripts in `code/scripts/` are the exact ones we used to generate the paper figures. They use repository-relative paths (`data/logs/rl/...`, `docs/latex/...`) that mirror our development repository layout, so they are reproducibility specifications rather than drop-in commands; to re-run them in the release directory, set up symlinks `data/logs/rl/oracle_panel_16k -> data/oracle_panel_16k` (and analogous for the other files), or read the script and substitute the paths. The exact panel numbers behind every figure are recoverable from the JSONL files using the snippet above.
+The figure / table reproduction scripts in `code/scripts/` are the exact ones we used to generate the paper figures. They use repository-relative paths (`data/logs/rl/...`) that mirror our development repository layout. To make them drop-in runnable in this release directory, run the one-time setup once:
+
+```bash
+bash setup_release_paths.sh
+```
+
+This creates a `data/logs/rl/` directory of symlinks pointing at the released files (and a `code/data` -> `../data` symlink so the `parent.parent`-relative `REPO` constant resolves correctly). After that, scripts run unmodified, e.g.
+
+```bash
+python3 code/scripts/audit_bounds.py            # audit lower/upper bounds (Section 5.5)
+python3 code/scripts/build_bottleneck_lattice.py # bottleneck-lattice figure + JSON
+```
+
+The exact panel numbers behind every figure are also recoverable directly from the JSONL files using the parent-probe snippet at the top of this section.
+
+## Preparing a clean copy for submission
+
+If you are uploading this directory as supplementary material (e.g. on OpenReview), run:
+
+```bash
+bash prepare_submission.sh
+```
+
+This produces `../milestone-oracle-diagnostic-submission.tar.gz` and a matching `.zip`, with `.git/`, `.DS_Store`, `__pycache__/`, and `.pyc` files excluded. Either archive is safe for double-blind upload (the in-tree `.git/config` would otherwise expose the GitHub remote).
 
 ## License
 
