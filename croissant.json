@@ -394,12 +394,13 @@
       "sha256": "d70447f9e228a5db262522f8abd143fd079954aad9635a589c8ccce18f068ad4"
     },
     {
-      "@type": "cr:FileSet",
-      "@id": "oracle_panel_16k_set",
-      "name": "oracle_panel_16k_set",
-      "description": "FileSet aggregator over the six per-model oracle_panel_16k files; allows mlcroissant to enumerate rows across the panel.",
+      "@type": "cr:FileObject",
+      "@id": "oracle_panel_16k_all.jsonl",
+      "name": "oracle_panel_16k_all.jsonl",
+      "description": "Concatenated oracle panel: all 12,744 records from the six per-(model, condition, family) JSONL files in data/oracle_panel_16k/. The per-model split files are also released individually under data/oracle_panel_16k/ for users who prefer per-file access.",
       "encodingFormat": "application/jsonlines",
-      "includes": "data/oracle_panel_16k/*.jsonl"
+      "contentUrl": "https://anonymous.4open.science/r/milestone-oracle-diagnostic-E03C/data/oracle_panel_16k_all.jsonl",
+      "sha256": "dcf3b68954dd9cd5ca7da74100de104397aeed724639f8137dcbcd634be95158"
     }
   ],
   "recordSet": [
@@ -487,8 +488,8 @@
           "description": "Panel model identifier.",
           "dataType": "sc:Text",
           "source": {
-            "fileSet": {
-              "@id": "oracle_panel_16k_set"
+            "fileObject": {
+              "@id": "oracle_panel_16k_all.jsonl"
             },
             "extract": {
               "column": "model"
@@ -502,8 +503,8 @@
           "description": "Probing condition: C1_direct, C2_descriptions, C3_gold_answers, C2_random, C2_generic, or C3_mismatched.",
           "dataType": "sc:Text",
           "source": {
-            "fileSet": {
-              "@id": "oracle_panel_16k_set"
+            "fileObject": {
+              "@id": "oracle_panel_16k_all.jsonl"
             },
             "extract": {
               "column": "condition"
@@ -517,8 +518,8 @@
           "description": "Family identifier (joinable on milestone_family.pid).",
           "dataType": "sc:Text",
           "source": {
-            "fileSet": {
-              "@id": "oracle_panel_16k_set"
+            "fileObject": {
+              "@id": "oracle_panel_16k_all.jsonl"
             },
             "extract": {
               "column": "pid"
@@ -532,8 +533,8 @@
           "description": "Number of correct rollouts out of K=8.",
           "dataType": "sc:Integer",
           "source": {
-            "fileSet": {
-              "@id": "oracle_panel_16k_set"
+            "fileObject": {
+              "@id": "oracle_panel_16k_all.jsonl"
             },
             "extract": {
               "column": "n_correct"
@@ -547,8 +548,8 @@
           "description": "Total rollouts attempted (always 8 in this release).",
           "dataType": "sc:Integer",
           "source": {
-            "fileSet": {
-              "@id": "oracle_panel_16k_set"
+            "fileObject": {
+              "@id": "oracle_panel_16k_all.jsonl"
             },
             "extract": {
               "column": "k"
