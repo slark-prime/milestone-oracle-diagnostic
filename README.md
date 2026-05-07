@@ -178,7 +178,7 @@ bash setup_release_paths.sh
 
 This creates a `data/logs/rl/` directory of symlinks pointing at the released files (and a `code/data` -> `../data` symlink so the `parent.parent`-relative `REPO` constant resolves correctly).
 
-**Scripts verified end-to-end on this release** (run after `setup_release_paths.sh`):
+**Scripts that reproduce the core 16K analyses from the released outputs** (run after `setup_release_paths.sh`):
 
 | Script | Paper artifact |
 |---|---|
@@ -194,7 +194,7 @@ This creates a `data/logs/rl/` directory of symlinks pointing at the released fi
 
 These nine scripts cover the headline figures and tables in the main text and the audit/budget appendices. The exact panel numbers behind every figure are also recoverable directly from the JSONL files using the parent-probe snippet at the top of this section.
 
-**Scripts that depend on intermediate artifacts not packaged here** (`manifest.jsonl`, `panel_fingerprints_16k.json`, `oracle_canonical.jsonl`, the 4K `oracle_panel/`, the 150-problem held-out source pool): `build_oracle_specificity.py`, `build_panel_figures_16k.py`, `build_specificity_decoupling.py`, `compute_bootstrap_cis.py`, `build_held_out_families.py`, `analyze_milestone_types.py`. These are reproducibility specifications; treat them as documentation of how the corresponding figures were built rather than as drop-in commands.
+**Scripts that are reproducibility specifications, not drop-in commands** — they depend on intermediate artifacts not packaged here (`manifest.jsonl`, `panel_fingerprints_16k.json`, `oracle_canonical.jsonl`, the 4K `oracle_panel/`, the 150-problem held-out source pool): `build_oracle_specificity.py`, `build_panel_figures_16k.py`, `build_specificity_decoupling.py`, `compute_bootstrap_cis.py`, `build_held_out_families.py`, `analyze_milestone_types.py`. The corresponding figures and tables in the paper are precomputed; the scripts document how they were built so reviewers can audit the procedure even though they cannot regenerate the outputs from this release alone.
 
 ## Preparing a clean copy for submission
 

@@ -19,7 +19,7 @@ OUT = REPO / "docs/latex/figures/audit_triage.pdf"
 
 CATEGORIES = [
     ("Artifacts",                  37, S.COLOR_AUDIT_ARTIFACT),
-    ("Strong evidence of failure", 57, S.COLOR_AUDIT_STRONG),
+    ("Composition-related",         57, S.COLOR_AUDIT_STRONG),
     ("Beyond capability",           5, S.COLOR_AUDIT_BEYOND),
     ("Not standalone",              1, S.COLOR_AUDIT_NOTSTANDALONE),
 ]
