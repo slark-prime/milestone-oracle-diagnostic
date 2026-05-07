@@ -1,7 +1,7 @@
 \begin{table}[h]
 \centering
 \scriptsize
-\caption{Format / extraction-failure audit on a 50-family random subset (seed 42), $K{=}8$ rollouts per family per condition, raw responses logged. Each rollout is classified into a bucket by the extractor: \textsc{no\_boxed} (no \texttt{\textbackslash boxed\{\}} in response), \textsc{no\_boxed\_trunc} (no boxed and hit \texttt{max\_tokens}), \textsc{unparsable} (boxed but content unparseable), \textsc{parsed\_wrong} (parsed, verifier says wrong), \textsc{parsed\_correct} (parsed, verifier accepts). Percentages are of the 400 rollouts in each (model, condition) cell.}
+\caption{\textbf{Format / extraction-failure audit on a 50-family random subset.} Percentages are of 400 rollouts per (model, condition) cell.}
 \label{tab:format_audit}
 \vspace{4pt}
 \setlength{\tabcolsep}{4pt}
@@ -19,4 +19,7 @@ DeepSeek-V3.1 & $C_1$ & 400 & 8.0\% & 53.8\% & 0.5\% & 18.8\% & 19.0\% \\
 DeepSeek-V3.1 & $C_3$-gold & 400 & 7.2\% & 44.0\% & 0.5\% & 24.8\% & 23.5\% \\
 \bottomrule
 \end{tabular}
+
+\vspace{2pt}
+\parbox{\linewidth}{\footnotesize \emph{Buckets.} \textsc{no\_boxed}: no \texttt{\textbackslash boxed\{\}} in response. \textsc{no\_boxed\_trunc}: no boxed and hit \texttt{max\_tokens}. \textsc{unparsable}: boxed but content unparseable. \textsc{parsed\_wrong}: parsed, verifier says wrong. \textsc{parsed\_correct}: parsed, verifier accepts.}
 \end{table}
