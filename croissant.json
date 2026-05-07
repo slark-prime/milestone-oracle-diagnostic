@@ -165,6 +165,42 @@
       "encodingFormat": "application/jsonlines",
       "contentUrl": "https://anonymous.4open.science/r/milestone-oracle-diagnostic-E03C/data/repaired_verifier.jsonl",
       "sha256": "5044c5e424413293f8ed1f273fb93b41df3dd9fe5501cb07c9be1b0368b2822f"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "diagnostic_multi_families_with_integrate.jsonl",
+      "name": "diagnostic_multi_families_with_integrate.jsonl",
+      "description": "354-family diagnostic set with the per-family INTEGRATE milestone restored via teacher re-decomposition. Same schema as the held-out 32-family slice; supports audits of the synthesis step and probing conditions beyond the three the main-text panel uses.",
+      "encodingFormat": "application/jsonlines",
+      "contentUrl": "https://anonymous.4open.science/r/milestone-oracle-diagnostic-E03C/data/diagnostic_multi_families_with_integrate.jsonl",
+      "sha256": "d868761a962e7e2364f0d6b29cacc6e06fe4404854ea02e68410b221a2efb3f3"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "human_validation.jsonl",
+      "name": "human_validation.jsonl",
+      "description": "Per-family validation-pass labels on the 50-family validation subset of the 100-family unrecovered audit. Reproduces the kappa = 0.64 inter-rater agreement statistic and the 12% (validation) vs 18% (primary) genuine-composition contrast in Appendix H.",
+      "encodingFormat": "application/jsonlines",
+      "contentUrl": "https://anonymous.4open.science/r/milestone-oracle-diagnostic-E03C/data/human_validation.jsonl",
+      "sha256": "00047a0257646e28adceb6a1addb6bca6582f8c7ef903bc393f0e5a0c66d077c"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "math_hard100_panel.jsonl",
+      "name": "math_hard100_panel.jsonl",
+      "description": "MATH hard-100 external comparator: per-(model, problem) pass/fail at K=8 across the six panel models. Backs the MATH score column reported in Tables 1 and 14.",
+      "encodingFormat": "application/jsonlines",
+      "contentUrl": "https://anonymous.4open.science/r/milestone-oracle-diagnostic-E03C/data/math_hard100_panel.jsonl",
+      "sha256": "1b571d58e917b24191da3bb107aaf4d21aa921a461fd47a8acc53e57b1823dfd"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "math_hard100_panel_16k.jsonl",
+      "name": "math_hard100_panel_16k.jsonl",
+      "description": "MATH hard-100 panel at max_tokens=16384 (the same decoding budget used for the diagnostic panel).",
+      "encodingFormat": "application/jsonlines",
+      "contentUrl": "https://anonymous.4open.science/r/milestone-oracle-diagnostic-E03C/data/math_hard100_panel_16k.jsonl",
+      "sha256": "9f730703a63ff3d113e0caab51867ac4a7a033e99745c43f3a2dde1495369c31"
     }
   ],
   "recordSet": [
