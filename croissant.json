@@ -107,14 +107,6 @@
       "sha256": "05e7d7e3405bdef7560005fef4fb287921aea5f0294f7bd2494e6caaba223b04"
     },
     {
-      "@type": "cr:FileSet",
-      "@id": "oracle_panel_16k",
-      "name": "oracle_panel_16k",
-      "description": "Per-(model, condition, family) parent-probe correctness counts for the six-model panel at max_tokens=16384 with K=8 rollouts per cell. One file per model.",
-      "encodingFormat": "application/jsonlines",
-      "includes": "https://anonymous.4open.science/r/milestone-oracle-diagnostic-E03C/data/oracle_panel_16k/*.jsonl"
-    },
-    {
       "@type": "cr:FileObject",
       "@id": "audit_consensus.jsonl",
       "name": "audit_consensus.jsonl",
@@ -203,6 +195,185 @@
       "encodingFormat": "application/jsonlines",
       "contentUrl": "https://anonymous.4open.science/r/milestone-oracle-diagnostic-E03C/data/math_hard100_panel_16k.jsonl",
       "sha256": "9f730703a63ff3d113e0caab51867ac4a7a033e99745c43f3a2dde1495369c31"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "oracle_panel_16k/qwen3_8b_pre_rl.jsonl",
+      "name": "oracle_panel_16k/qwen3_8b_pre_rl.jsonl",
+      "description": "Per-(condition, family) parent-probe correctness counts for qwen3_8b_pre_rl at max_tokens=16384 with K=8 rollouts per cell.",
+      "encodingFormat": "application/jsonlines",
+      "contentUrl": "https://anonymous.4open.science/r/milestone-oracle-diagnostic-E03C/data/oracle_panel_16k/qwen3_8b_pre_rl.jsonl",
+      "sha256": "8c2079da29c9b1c11ccdc174561b49a01327148be49a67421cfe267c2212107b"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "oracle_panel_16k/base_2k_step_180.jsonl",
+      "name": "oracle_panel_16k/base_2k_step_180.jsonl",
+      "description": "Per-(condition, family) parent-probe correctness counts for base_2k_step_180 at max_tokens=16384 with K=8 rollouts per cell.",
+      "encodingFormat": "application/jsonlines",
+      "contentUrl": "https://anonymous.4open.science/r/milestone-oracle-diagnostic-E03C/data/oracle_panel_16k/base_2k_step_180.jsonl",
+      "sha256": "8fbe053ab99a40e82536d6a6a4febdedc061fe839ce0851a0cd3c168b95ae887"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "oracle_panel_16k/mile_2k_step_180.jsonl",
+      "name": "oracle_panel_16k/mile_2k_step_180.jsonl",
+      "description": "Per-(condition, family) parent-probe correctness counts for mile_2k_step_180 at max_tokens=16384 with K=8 rollouts per cell.",
+      "encodingFormat": "application/jsonlines",
+      "contentUrl": "https://anonymous.4open.science/r/milestone-oracle-diagnostic-E03C/data/oracle_panel_16k/mile_2k_step_180.jsonl",
+      "sha256": "1734b6017cb2d0d68bd47b0dcf58c9a229dd3210d550fba13103f8ee9bfa643e"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "oracle_panel_16k/gpt_oss_20b.jsonl",
+      "name": "oracle_panel_16k/gpt_oss_20b.jsonl",
+      "description": "Per-(condition, family) parent-probe correctness counts for gpt_oss_20b at max_tokens=16384 with K=8 rollouts per cell.",
+      "encodingFormat": "application/jsonlines",
+      "contentUrl": "https://anonymous.4open.science/r/milestone-oracle-diagnostic-E03C/data/oracle_panel_16k/gpt_oss_20b.jsonl",
+      "sha256": "710fa38edcfbafb7b5b4dacace74a781c3debdae3e105e1b6acf50749ee529c4"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "oracle_panel_16k/llama_3_3_70b_instruct.jsonl",
+      "name": "oracle_panel_16k/llama_3_3_70b_instruct.jsonl",
+      "description": "Per-(condition, family) parent-probe correctness counts for llama_3_3_70b_instruct at max_tokens=16384 with K=8 rollouts per cell.",
+      "encodingFormat": "application/jsonlines",
+      "contentUrl": "https://anonymous.4open.science/r/milestone-oracle-diagnostic-E03C/data/oracle_panel_16k/llama_3_3_70b_instruct.jsonl",
+      "sha256": "1e72d505404c198e0c2b56e17426ac27283d857e2b17589bffa06a381343426b"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "oracle_panel_16k/deepseek_v3_1.jsonl",
+      "name": "oracle_panel_16k/deepseek_v3_1.jsonl",
+      "description": "Per-(condition, family) parent-probe correctness counts for deepseek_v3_1 at max_tokens=16384 with K=8 rollouts per cell.",
+      "encodingFormat": "application/jsonlines",
+      "contentUrl": "https://anonymous.4open.science/r/milestone-oracle-diagnostic-E03C/data/oracle_panel_16k/deepseek_v3_1.jsonl",
+      "sha256": "798b4393492d2c4fc947ef6ef50c4209016aa177b5e630f175b71b152f72044e"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "oracle_repaired.jsonl",
+      "name": "oracle_repaired.jsonl",
+      "description": "Post-repair oracle outcomes on the 100-family audited subset, used to back the 19/25 verifier-fix and 6-still-unrecovered counts in Section 5.5 (also Table tab:repair_results).",
+      "encodingFormat": "application/jsonlines",
+      "contentUrl": "https://anonymous.4open.science/r/milestone-oracle-diagnostic-E03C/data/oracle_repaired.jsonl",
+      "sha256": "bdbb37ee4793c45d66dce3a54898112441919549244e51d71b6a46cbc9d7210a"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "stage0_panel/qwen3_8b_pre_rl.jsonl",
+      "name": "stage0_panel/qwen3_8b_pre_rl.jsonl",
+      "description": "Stage 0 milestone-test outputs for qwen3_8b_pre_rl at the 4K screening budget. Per-(family, milestone) correctness count out of K=8 isolation rollouts; supports the bottleneck lattice and per-model composition-gap counts.",
+      "encodingFormat": "application/jsonlines",
+      "contentUrl": "https://anonymous.4open.science/r/milestone-oracle-diagnostic-E03C/data/stage0_panel/qwen3_8b_pre_rl.jsonl",
+      "sha256": "af639e33bb4914b106722c476916e205683da1b36bdfa5e2f3d27dbbe5dfbcf6"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "stage0_panel/base_2k_step_180.jsonl",
+      "name": "stage0_panel/base_2k_step_180.jsonl",
+      "description": "Stage 0 milestone-test outputs for base_2k_step_180 at the 4K screening budget. Per-(family, milestone) correctness count out of K=8 isolation rollouts; supports the bottleneck lattice and per-model composition-gap counts.",
+      "encodingFormat": "application/jsonlines",
+      "contentUrl": "https://anonymous.4open.science/r/milestone-oracle-diagnostic-E03C/data/stage0_panel/base_2k_step_180.jsonl",
+      "sha256": "47d58b00251e0341fc1f266c77ddc78123df51b9d4557d50344a652957193334"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "stage0_panel/mile_2k_step_180.jsonl",
+      "name": "stage0_panel/mile_2k_step_180.jsonl",
+      "description": "Stage 0 milestone-test outputs for mile_2k_step_180 at the 4K screening budget. Per-(family, milestone) correctness count out of K=8 isolation rollouts; supports the bottleneck lattice and per-model composition-gap counts.",
+      "encodingFormat": "application/jsonlines",
+      "contentUrl": "https://anonymous.4open.science/r/milestone-oracle-diagnostic-E03C/data/stage0_panel/mile_2k_step_180.jsonl",
+      "sha256": "9b179b520469f7746f66440102a7630be6d43b0e16095e3b8637e8b516ef781a"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "stage0_panel/gpt_oss_20b.jsonl",
+      "name": "stage0_panel/gpt_oss_20b.jsonl",
+      "description": "Stage 0 milestone-test outputs for gpt_oss_20b at the 4K screening budget. Per-(family, milestone) correctness count out of K=8 isolation rollouts; supports the bottleneck lattice and per-model composition-gap counts.",
+      "encodingFormat": "application/jsonlines",
+      "contentUrl": "https://anonymous.4open.science/r/milestone-oracle-diagnostic-E03C/data/stage0_panel/gpt_oss_20b.jsonl",
+      "sha256": "0ed4f5cd7dc3ea319a8285c5c7e7b1ca6d24047a5d662c5eb447b30b3101953d"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "stage0_panel/llama_3_3_70b_instruct.jsonl",
+      "name": "stage0_panel/llama_3_3_70b_instruct.jsonl",
+      "description": "Stage 0 milestone-test outputs for llama_3_3_70b_instruct at the 4K screening budget. Per-(family, milestone) correctness count out of K=8 isolation rollouts; supports the bottleneck lattice and per-model composition-gap counts.",
+      "encodingFormat": "application/jsonlines",
+      "contentUrl": "https://anonymous.4open.science/r/milestone-oracle-diagnostic-E03C/data/stage0_panel/llama_3_3_70b_instruct.jsonl",
+      "sha256": "d85ade996d86a5f9f44fa09803c9a758ec8967a485389048f1ed7a9ab30cd844"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "stage0_panel/deepseek_v3_1.jsonl",
+      "name": "stage0_panel/deepseek_v3_1.jsonl",
+      "description": "Stage 0 milestone-test outputs for deepseek_v3_1 at the 4K screening budget. Per-(family, milestone) correctness count out of K=8 isolation rollouts; supports the bottleneck lattice and per-model composition-gap counts.",
+      "encodingFormat": "application/jsonlines",
+      "contentUrl": "https://anonymous.4open.science/r/milestone-oracle-diagnostic-E03C/data/stage0_panel/deepseek_v3_1.jsonl",
+      "sha256": "ee25cf48892c85f48634102d0ef8fc683e07a73359c8f7456c22ddf44597bb1a"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "stage0_panel_16k/qwen3_8b_pre_rl.jsonl",
+      "name": "stage0_panel_16k/qwen3_8b_pre_rl.jsonl",
+      "description": "Stage 0 milestone-test outputs for qwen3_8b_pre_rl at max_tokens=16384, replicating the screening-budget run; backs the budget-replication delta table (Appendix H).",
+      "encodingFormat": "application/jsonlines",
+      "contentUrl": "https://anonymous.4open.science/r/milestone-oracle-diagnostic-E03C/data/stage0_panel_16k/qwen3_8b_pre_rl.jsonl",
+      "sha256": "cfb1acc753bf0b5c4947e2a1d8434df318895daf11223c528b04202184b6e687"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "stage0_panel_16k/base_2k_step_180.jsonl",
+      "name": "stage0_panel_16k/base_2k_step_180.jsonl",
+      "description": "Stage 0 milestone-test outputs for base_2k_step_180 at max_tokens=16384, replicating the screening-budget run; backs the budget-replication delta table (Appendix H).",
+      "encodingFormat": "application/jsonlines",
+      "contentUrl": "https://anonymous.4open.science/r/milestone-oracle-diagnostic-E03C/data/stage0_panel_16k/base_2k_step_180.jsonl",
+      "sha256": "aac7c2f1fad3025cf6b057471bdae27969761c80b3026ec771e6dcaf45c01c31"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "stage0_panel_16k/mile_2k_step_180.jsonl",
+      "name": "stage0_panel_16k/mile_2k_step_180.jsonl",
+      "description": "Stage 0 milestone-test outputs for mile_2k_step_180 at max_tokens=16384, replicating the screening-budget run; backs the budget-replication delta table (Appendix H).",
+      "encodingFormat": "application/jsonlines",
+      "contentUrl": "https://anonymous.4open.science/r/milestone-oracle-diagnostic-E03C/data/stage0_panel_16k/mile_2k_step_180.jsonl",
+      "sha256": "06edfd1537c4de0825cc75af1e9d869b54d48e72ad7e9b3b70e58b0d2506ea1f"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "stage0_panel_16k/gpt_oss_20b.jsonl",
+      "name": "stage0_panel_16k/gpt_oss_20b.jsonl",
+      "description": "Stage 0 milestone-test outputs for gpt_oss_20b at max_tokens=16384, replicating the screening-budget run; backs the budget-replication delta table (Appendix H).",
+      "encodingFormat": "application/jsonlines",
+      "contentUrl": "https://anonymous.4open.science/r/milestone-oracle-diagnostic-E03C/data/stage0_panel_16k/gpt_oss_20b.jsonl",
+      "sha256": "b142e0740e736ae0c58107773c6b2341995c39a9aedd4ccc73202d8a69b5c9e8"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "stage0_panel_16k/llama_3_3_70b_instruct.jsonl",
+      "name": "stage0_panel_16k/llama_3_3_70b_instruct.jsonl",
+      "description": "Stage 0 milestone-test outputs for llama_3_3_70b_instruct at max_tokens=16384, replicating the screening-budget run; backs the budget-replication delta table (Appendix H).",
+      "encodingFormat": "application/jsonlines",
+      "contentUrl": "https://anonymous.4open.science/r/milestone-oracle-diagnostic-E03C/data/stage0_panel_16k/llama_3_3_70b_instruct.jsonl",
+      "sha256": "73cee0e8e4e24d8f474ba1be867a1a1621e84fc6d18d995c60476c57f05091a2"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "stage0_panel_16k/deepseek_v3_1.jsonl",
+      "name": "stage0_panel_16k/deepseek_v3_1.jsonl",
+      "description": "Stage 0 milestone-test outputs for deepseek_v3_1 at max_tokens=16384, replicating the screening-budget run; backs the budget-replication delta table (Appendix H).",
+      "encodingFormat": "application/jsonlines",
+      "contentUrl": "https://anonymous.4open.science/r/milestone-oracle-diagnostic-E03C/data/stage0_panel_16k/deepseek_v3_1.jsonl",
+      "sha256": "d70447f9e228a5db262522f8abd143fd079954aad9635a589c8ccce18f068ad4"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "oracle_panel_16k_set",
+      "name": "oracle_panel_16k_set",
+      "description": "FileSet aggregator over the six per-model oracle_panel_16k files; allows mlcroissant to enumerate rows across the panel.",
+      "encodingFormat": "application/jsonlines",
+      "includes": "data/oracle_panel_16k/*.jsonl"
     }
   ],
   "recordSet": [
@@ -291,7 +462,7 @@
           "dataType": "sc:Text",
           "source": {
             "fileSet": {
-              "@id": "oracle_panel_16k"
+              "@id": "oracle_panel_16k_set"
             },
             "extract": {
               "column": "model"
@@ -306,7 +477,7 @@
           "dataType": "sc:Text",
           "source": {
             "fileSet": {
-              "@id": "oracle_panel_16k"
+              "@id": "oracle_panel_16k_set"
             },
             "extract": {
               "column": "condition"
@@ -321,7 +492,7 @@
           "dataType": "sc:Text",
           "source": {
             "fileSet": {
-              "@id": "oracle_panel_16k"
+              "@id": "oracle_panel_16k_set"
             },
             "extract": {
               "column": "pid"
@@ -336,7 +507,7 @@
           "dataType": "sc:Integer",
           "source": {
             "fileSet": {
-              "@id": "oracle_panel_16k"
+              "@id": "oracle_panel_16k_set"
             },
             "extract": {
               "column": "n_correct"
@@ -351,7 +522,7 @@
           "dataType": "sc:Integer",
           "source": {
             "fileSet": {
-              "@id": "oracle_panel_16k"
+              "@id": "oracle_panel_16k_set"
             },
             "extract": {
               "column": "k"
