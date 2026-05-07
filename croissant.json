@@ -16,6 +16,7 @@
       "@type": "@vocab"
     },
     "dct": "http://purl.org/dc/terms/",
+    "prov": "http://www.w3.org/ns/prov#",
     "equivalentProperty": "cr:equivalentProperty",
     "samplingRate": "cr:samplingRate",
     "examples": {
@@ -78,6 +79,31 @@
   "rai:personalSensitiveInformation": "None. The dataset contains no personal, private, or sensitive information. Source problems are mathematics word problems and competition problems from a publicly released math benchmark (NuminaMath-1.5-RL-Verifiable). Milestone roadmaps and gold answers are LLM-generated mathematical content. Audit annotations are technical category labels (genuine composition / decomposition incomplete / verifier artifact / not standalone / beyond capability) produced by the authors; no human-subject data is included.",
   "rai:dataSocialImpact": "The intended impact is methodological rather than deployment-facing. The dataset is a diagnostic instrument for math-reasoning models: it lets users compare models by where reasoning breaks down on a fixed set of math problems, and audit the residual unrecovered category before drawing mechanism-level conclusions. We expect it to support work on math-reasoning evaluation, training-recipe analysis (especially RL on math), and benchmark-quality auditing. Anticipated risks are minimal: the source problems are public math problems with no personal or sensitive content, no demographic attributes are encoded, and the diagnostic is not a leaderboard, so it does not directly drive deployment decisions about a specific model or product. A second-order risk is that absolute counts could be misread as a model-neutral capability ranking; the dataset documentation and the paper explicitly frame the protocol as a fixed diagnostic slice anchored on Qwen3-8B-Base screening rather than a model-neutral sample, and the audit appendix disaggregates the residual category before any mechanism-level claim.",
   "rai:hasSyntheticData": true,
+  "prov:wasDerivedFrom": [
+    {
+      "@type": "prov:Entity",
+      "name": "NuminaMath-1.5-RL-Verifiable",
+      "description": "Source pool for the parent math problems. The 354-family main set, the 731-family compiled set, and the 32-family held-out slice are all selected from this corpus.",
+      "url": "https://huggingface.co/datasets/AI-MO/NuminaMath-1.5"
+    },
+    {
+      "@type": "prov:Entity",
+      "name": "MATH (Hendrycks et al., 2021)",
+      "description": "Source for the 100-problem hard subset (level-5 problems from math500_test) used as the external aggregate comparator. Raw problems are not re-released; the released math_hard100_panel*.jsonl files reference problems by their MATH problem ID.",
+      "url": "https://github.com/hendrycks/math"
+    }
+  ],
+  "prov:wasGeneratedBy": {
+    "@type": "prov:Activity",
+    "name": "Milestone-oracle compilation pipeline",
+    "description": "Per parent problem: (1) the teacher model (GPT-5.4 with thinking mode enabled, accessed via hosted-inference API) is prompted to produce a typed milestone decomposition with self-contained descriptions, answer schemas, and gold answers; (2) schema enforcement, anti-leakage filtering, and standalone-solvability checks are applied; (3) the strict symbolic verifier cascade (boxed extraction, schema-aware parse, sympy equivalence, math-verify) validates each milestone gold answer; (4) Qwen3-8B-Base is run on the parent and on each milestone in isolation as the anchor screen; (5) families passing the anchor-solvable + at-least-two-non-Integrate filter form the 354-family main set. The pipeline source is included under code/decomposer/ in the released artifact.",
+    "prov:used": [
+      "GPT-5.4 (teacher; hosted inference)",
+      "Qwen3-8B-Base (anchor screen; Tinker managed inference)",
+      "math-verify (symbolic verifier)",
+      "DeepSeek-R1-0528 (auxiliary CoT distillation pass for the SFT warmup of MilestoneRL-2K)"
+    ]
+  },
   "distribution": [
     {
       "@type": "cr:FileObject",

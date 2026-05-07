@@ -20,14 +20,26 @@ data/
     gpt_oss_20b.jsonl
     llama_3_3_70b_instruct.jsonl
     deepseek_v3_1.jsonl
+  stage0_panel/                       Stage 0 milestone-only test outputs at the
+                                       4K screening budget used during diagnostic-set
+                                       construction (per-(model, family, milestone) cells).
+  stage0_panel_16k/                   Stage 0 rerun at 16K (the budget used by all
+                                       main-text taxonomy and panel results).
+  math_hard100_panel.jsonl            MATH hard-100 panel outputs (per-model, per-problem)
+  math_hard100_panel_16k.jsonl        at 4K and 16K. Raw MATH problems are not re-released;
+                                       see paper Section 4 for the problem-ID provenance.
   audit_consensus.jsonl               100-family unrecovered audit (consensus rubric).
   audit_rater_a.jsonl                 Per-rater audit labels.
   audit_rater_b.jsonl
+  human_validation.jsonl              50-family validation pass against the audit rubric.
   oracle_leak_safe_repair.jsonl       Oracle outcomes after leak-safe decomposition repair.
+  oracle_repaired.jsonl               Pre-leak-safe natural-repair oracle (transparency only;
+                                       superseded by oracle_leak_safe_repair.jsonl).
   repaired_decomp_leak_safe.jsonl     Regenerated leak-safe milestone families.
   repaired_verifier.jsonl             Verifier-repaired families (canonical-answer fixes).
 prompts/
-  oracle/                             Verbatim student-facing oracle prompts.
+  oracle/                             Exact student-facing oracle prompt templates
+                                       (per-family substitution variables filled at runtime).
     c1_direct.txt                     C1: parent only.
     c2_descriptions.txt               C2: parent + milestone roadmap.
     c3_gold.txt                       C3: parent + roadmap + gold milestone answers.
@@ -186,15 +198,12 @@ This creates a `data/logs/rl/` directory of symlinks pointing at the released fi
 | `build_two_arm_redistribution.py` | Figure 5 (longitudinal) |
 | `build_audit_triage_figure.py` | Figure 6 (audit triage) |
 | `audit_bounds.py` | Section 4.5 lower/upper-bound bookkeeping |
-| `build_4k_vs_16k_comparison.py` | Appendix L (decoding-budget audit) |
-| `build_trajectory_tomography.py` | Figure 8 (training trajectory) |
 | `build_accuracy_vs_recoverability_scatter.py` | Figure 3(b) inputs |
 | `bootstrap_fingerprint_cis.py` | Appendix F (fingerprint CIs) |
-| `analyze_format_audit.py` | Appendix L (format audit) |
 
-These nine scripts cover the headline figures and tables in the main text and the audit/budget appendices. The exact panel numbers behind every figure are also recoverable directly from the JSONL files using the parent-probe snippet at the top of this section.
+These six scripts run end-to-end on this release and rebuild the corresponding paper figures from the released JSONL panels. The exact panel numbers behind every figure are also recoverable directly from the JSONL files using the parent-probe snippet at the top of this section.
 
-**Scripts that are reproducibility specifications, not drop-in commands** — they depend on intermediate artifacts not packaged here (`manifest.jsonl`, `panel_fingerprints_16k.json`, `oracle_canonical.jsonl`, the 4K `oracle_panel/`, the 150-problem held-out source pool): `build_oracle_specificity.py`, `build_panel_figures_16k.py`, `build_specificity_decoupling.py`, `compute_bootstrap_cis.py`, `build_held_out_families.py`, `analyze_milestone_types.py`. The corresponding figures and tables in the paper are precomputed; the scripts document how they were built so reviewers can audit the procedure even though they cannot regenerate the outputs from this release alone.
+**Scripts that are reproducibility specifications, not drop-in commands** — they depend on intermediate artifacts not packaged here (`manifest.jsonl`, `panel_fingerprints_16k.json`, `oracle_canonical.jsonl`, the 4K `oracle_panel/`, the per-checkpoint `oracle_trajectory/`, the `format_audit/` raw rollouts, the 150-problem held-out source pool): `build_oracle_specificity.py`, `build_panel_figures_16k.py`, `build_specificity_decoupling.py`, `compute_bootstrap_cis.py`, `build_held_out_families.py`, `analyze_milestone_types.py`, `build_4k_vs_16k_comparison.py`, `build_trajectory_tomography.py`, `analyze_format_audit.py`. The corresponding figures and tables in the paper are precomputed (the populated `.tex` outputs are shipped under `code/docs/latex/tables/`); these scripts document how those numbers were built so reviewers can audit the procedure even though they cannot regenerate the outputs from this release alone.
 
 ## Preparing a clean copy for submission
 
