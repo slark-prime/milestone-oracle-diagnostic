@@ -17,11 +17,23 @@ import json
 from collections import Counter, defaultdict
 from pathlib import Path
 
+import sys
+
 REPO = Path(__file__).resolve().parent.parent
 PANEL_4K = REPO / "data/logs/rl/oracle_panel"
 PANEL_16K = REPO / "data/logs/rl/oracle_panel_16k"
 OUT_JSON = REPO / "data/logs/rl/panel_4k_vs_16k.json"
 OUT_TEX = REPO / "docs/latex/tables/panel_4k_vs_16k.tex"
+
+if not PANEL_4K.exists():
+    sys.exit(
+        f"ERROR: required input directory {PANEL_4K} not found.\n"
+        "This script needs the 4K oracle_panel/ directory, which is not "
+        "packaged with the public release (size and provenance considerations). "
+        "The precomputed output table panel_4k_vs_16k.tex is included under "
+        "code/docs/latex/tables/. See README section 'Reproducing the paper "
+        "numbers' for which scripts run end-to-end on this release."
+    )
 
 MODELS = [
     ("qwen3_8b_pre_rl", "pre-RL"),

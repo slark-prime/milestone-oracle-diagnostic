@@ -145,7 +145,7 @@ def draw_definition_matrix(ax):
         (1, 3, "Composition\ngap",              S.COLOR_COMPOSITION,      "white"),
         # FAIL row
         (2, 0, "Direct",                     S.COLOR_DIRECT,        "white"),
-        (2, 1, "rare",                       S.COLOR_DIVIDER,       S.COLOR_TEXT_MUTED),
+        (2, 1, "Missing-\nmilestone\ngap",   S.COLOR_MISSING_MS,    "white"),
         (2, 2, "Missing-\nmilestone\ngap",   S.COLOR_MISSING_MS,    "white"),
         (2, 3, "Capability\ngap",            S.COLOR_CAPABILITY,    "white"),
     ]

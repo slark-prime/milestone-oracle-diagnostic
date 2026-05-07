@@ -13,6 +13,10 @@ data/
   diagnostic_354_families.jsonl       Main diagnostic set (354 milestone families).
   diagnostic_731_compiled.jsonl       Pre-restriction 731-family compiled set (provenance).
   diagnostic_held_out_32.jsonl        32-family held-out slice (disjoint compilation).
+  diagnostic_multi_families_with_integrate.jsonl
+                                       354-family set with the INTEGRATE final-step milestone
+                                       restored (used by the leak-residual audit; the main
+                                       set keeps the integration step private).
   oracle_panel_16k/                   Per-(model, condition, family) probe outcomes
     qwen3_8b_pre_rl.jsonl             at max_tokens=16384, K=8.
     base_2k_step_180.jsonl            (OutcomeRL-2K)
@@ -172,7 +176,7 @@ Python 3.10+ is required. Both quickstart snippets above were verified under Pyt
 
 We have verified the following entry points end-to-end on this release:
 
-1. **Parent-probe outcomes per model.** Run the first quickstart snippet against any of the six panel files in `data/oracle_panel_16k/`. For `mile_2k_step_180.jsonl`, the output is `{Direct: 96, Roadmap-Needed: 47, Answers-Needed: 22, Unrecovered: 189}` (matches paper Table 12).
+1. **Parent-probe outcomes per model.** Run the first quickstart snippet against any of the six panel files in `data/oracle_panel_16k/`. For `mile_2k_step_180.jsonl`, the output is `{Direct: 96, Roadmap-Needed: 47, Answers-Needed: 22, Unrecovered: 189}` (matches the parent-probe fingerprint reported in the paper).
 2. **Strict symbolic verifier.** Run the second quickstart snippet. Returns `ACCEPT` with reason `boxed match (math_reward)`.
 3. **Croissant validation.**
    ```python
@@ -194,7 +198,7 @@ This creates a `data/logs/rl/` directory of symlinks pointing at the released fi
 
 | Script | Paper artifact |
 |---|---|
-| `build_bottleneck_lattice.py` | Figure 4, Table 12 (reasoning-gap taxonomy) |
+| `build_bottleneck_lattice.py` | Figure 4 and the reasoning-gap taxonomy table |
 | `build_two_arm_redistribution.py` | Figure 5 (longitudinal) |
 | `build_audit_triage_figure.py` | Figure 6 (audit triage) |
 | `audit_bounds.py` | Section 4.5 lower/upper-bound bookkeeping |

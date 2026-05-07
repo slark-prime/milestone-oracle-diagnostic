@@ -12,10 +12,21 @@ import json
 from collections import Counter, defaultdict
 from pathlib import Path
 
+import sys
+
 REPO = Path(__file__).resolve().parent.parent
 AUDIT_DIR = REPO / "data/logs/rl/format_audit"
 OUT_JSON = REPO / "data/logs/rl/format_audit_summary.json"
 OUT_TEX = REPO / "docs/latex/tables/format_audit.tex"
+
+if not AUDIT_DIR.exists():
+    sys.exit(
+        f"ERROR: required input directory {AUDIT_DIR} not found.\n"
+        "This script needs the format_audit/ raw rollout logs, which are not "
+        "packaged with the public release. The precomputed format_audit.tex "
+        "is included under code/docs/latex/tables/. See README for which "
+        "scripts run end-to-end on this release."
+    )
 
 MODELS = [
     ("qwen3_8b_pre_rl", "Qwen3-8B-Base (pre-RL)"),

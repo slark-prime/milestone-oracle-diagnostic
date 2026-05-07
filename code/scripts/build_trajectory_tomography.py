@@ -21,11 +21,24 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 
+import sys
+
 REPO = Path(__file__).resolve().parent.parent
 PANEL_16K = REPO / "data/logs/rl/oracle_panel_16k"
 TRAJ_DIR = REPO / "data/logs/rl/oracle_trajectory"
 OUT_FIG = REPO / "docs/latex/figures/trajectory_tomography.pdf"
 OUT_JSON = REPO / "data/logs/rl/trajectory_states.json"
+
+if not TRAJ_DIR.exists():
+    sys.exit(
+        f"ERROR: required input directory {TRAJ_DIR} not found.\n"
+        "This script needs the per-checkpoint oracle_trajectory/ directory "
+        "(intermediate Tinker checkpoints at steps 30/60/90/120/150 for both "
+        "RL arms), which is not packaged with the public release. The "
+        "precomputed trajectory_tomography.pdf is included under "
+        "code/docs/latex/figures/. See README for which scripts run end-to-end "
+        "on this release."
+    )
 
 STEPS = [0, 30, 60, 90, 120, 150, 180]
 ARMS = {
