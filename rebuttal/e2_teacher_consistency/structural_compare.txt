@@ -1,0 +1,59 @@
+families compared: 53
+milestone count: inkling mean 8.1 vs gpt5.4 mean 5.8
+type share (ink vs g54):
+  COMPUTE     23.0% vs  21.1%
+  INTEGRATE   12.4% vs  17.5%
+  KEY_MOVE    10.8% vs  12.7%
+  LEMMA       14.3% vs  12.7%
+  MODEL       12.6% vs  17.2%
+  NORMALIZE    8.9% vs   0.3%
+  SANITY      12.9% vs  16.6%
+  WARMUP       5.2% vs   1.9%
+leaky non-INTEGRATE milestones (gold==parent): 13
+   ('0ad0ce27', 'COMPUTE', '∠AMD = 125°')
+   ('b75a6cd4', 'COMPUTE', '1')
+   ('b75a6cd4', 'SANITY', 'sqrt(9999)≈99.995 => fractional part ≈0.')
+   ('860813bf', 'LEMMA', '(Σ a_i)(Σ 1/a_i) ≥ k²; equality iff all ')
+   ('860813bf', 'COMPUTE', 'x_1 = x_2 = x_3 = 1 works.')
+   ('21e6e542', 'COMPUTE', '39: A1 false, A2 false (39/7≈5.57). 52: ')
+INTEGRATE-vs-canonical strict disagreements: 40/53
+   ('56764bd2', 'AQ/AP = √5.', '\\sqrt{5}', 'PARSE_ERROR: could not parse one side')
+   ('a0146340', '(√7, √7, 0)', '(x,y,z)=(\\sqrt{7},\\sqrt{7},0)', 'PARSE_ERROR: could not parse one side')
+   ('329c4d6b', 'Maximum = Minimum = 1.', '[\\sum_{k=1}^{n}(\\sqrt{k}-\\sqrt{k-1})^{2}]^{\\frac{1', 'PARSE_ERROR: could not parse one side')
+   ('0ad0ce27', '125°', '125', 'PARSE_ERROR: could not parse one side')
+   ('ad098d0c', 'Maximum value is 3√2/4, attained at x = (3k+1)π/3 ', '\\frac{3 \\sqrt{2}}{4}', 'PARSE_ERROR: could not parse one side')
+   ('5ce4a16b', 'Smallest n = 3; I = i√3/9.', 'n=3, I=\\frac{\\sqrt{3}}{9} \\mathrm{i}', 'PARSE_ERROR: could not parse one side')
+   ('4e8f249c', 'Q = (2p, 2p) and Q = (2p, -2p); minimal |PQ| = √5 ', 'Q_{1}(2p,2p)Q_{2}(2p,-2p)', 'PARSE_ERROR: could not parse one side')
+   ('860813bf', 'n = 2 and n = 3 (i.e., n∈{2,3}).', 'n=3,x_{1}=x_{2}=x_{3}=1;\\,n=2,x_{1}=\\frac{3+\\sqrt{', 'PARSE_ERROR: could not parse one side')
+   ('113207b3', 'Nina 1st, Galia 2nd, Valya 3rd, Zina 4th.', 'Nina,Galya,Valya,Zina', 'PARSE_ERROR: could not parse one side')
+   ('1c902a3d', "8 o'clock and 16 minutes (8:16).", '8:16', 'PARSE_ERROR: could not parse one side')
+   ('92d1d741', '2416 pea seeds', '4107', 'NOT_EQUIVALENT: expressions differ')
+   ('723ca360', 'f(x) = x³ + C x, C∈R', 'f(x)=x^3+cx', 'PARSE_ERROR: could not parse one side')
+   ('8add600c', 'Anna → Biology, Vika → History, Masha → Literature', 'Vika', 'PARSE_ERROR: could not parse one side')
+   ('bbf64aab', 'No, not for every rectangle. Yes exactly when b>2a', '2b', 'PARSE_ERROR: could not parse one side')
+   ('8dee0d91', 'Quadrant I or Quadrant IV (first and fourth quadra', '\\alpha \\in I', 'PARSE_ERROR: could not parse one side')
+   ('fa789990', '∫ (sin2x-tan²x)/(e^{tan x}+sin²x) dx = ln|e^{tan x', '\\ln(e^{\\tanx}+\\sin^{2}x)-\\tanx+C', 'PARSE_ERROR: could not parse one side')
+   ('2c80dc5e', '100 km/h', '100\\frac{\\mathrm{}}{\\mathrm{}}', 'PARSE_ERROR: could not parse one side')
+   ('5723291b', 'Range of a is S = {a ∈ ℝ | uniqueness conditions (', '(-\\infty,-1]\\cup[1,+\\infty)', 'PARSE_ERROR: could not parse one side')
+   ('9381ce52', '(2n-1 choose n-1)2^{2n-1} + (2n-2 choose n-2)(2^{2', '2^{2n-1}\\timesC_{2n-1}^{n}+(2^{2n-1}-1)\\timesC_{2n', 'PARSE_ERROR: could not parse one side')
+   ('41348e33', '(x_1,x_2) ∈ { (c,c) | c ∈ ℤ, c ≠ 0 }.', 'x_1=x_2=', 'PARSE_ERROR: could not parse one side')
+   ('dd560ce4', '8.023. sine of seven x plus sine of nine x equals ', '\\( x_{1}=\\frac{\\pi}{2}(2k+1); x_{2}=\\frac{2}{5}\\pi', 'PARSE_ERROR: could not parse one side')
+   ('9705135f', 'arccos(-5/13).', '\\pi-\\arctan \\frac{12}{5}', 'PARSE_ERROR: could not parse one side')
+   ('a171965e', '1/2 (achieved at a = ±1).', '\\frac{3}{4}', 'PARSE_ERROR: could not parse one side')
+   ('c16ed852', 'All pairs are (15d,15N/d) with d|N, gcd(d,N/d)=1, ', '(15;525),(75;105)', 'PARSE_ERROR: could not parse one side')
+   ('e1a7b708', '(x̄, ȳ) = (2R/3, 2R/3).', 'x_{}=y_{}=\\frac{2R}{3}', 'PARSE_ERROR: could not parse one side')
+   ('4f38a96a', 'x = -π/8 + 2nπ, x = 11π/8 + 2nπ, n ∈ ℤ', 'x\\in{-\\frac{\\pi}{8}+2k\\pi,\\frac{11\\pi}{8}+2k\\pi:k\\', 'PARSE_ERROR: could not parse one side')
+   ('c56480de', 'V = a b c sinα sinβ / √(sin²α + sin²β - sin²α sin²', '\\frac{abc}{\\sqrt{1+\\operatorname{ctg}^2\\alpha+\\ope', 'PARSE_ERROR: could not parse one side')
+   ('98b95c28', '(p,q) ∈ {(2,2), (1,5), (5,1), (2,3), (3,2)}.', '(2,3),(3,2),(2,2),(1,5),(5,1)', 'PARSE_ERROR: could not parse one side')
+   ('39ff252d', '(√5 - 1)/2', '\\frac{\\sqrt{5}-1}{2}', 'PARSE_ERROR: could not parse one side')
+   ('1bacd56b', '3:5 (Body 1 containing S is 3/8 of total; Body 2 i', '3:5', 'PARSE_ERROR: could not parse one side')
+   ('cccd8823', '(1) B,A,C are not collinear. (2) O1C1 = (24√10+15)', '\\frac{24\\sqrt{10}-15}{41}', 'PARSE_ERROR: could not parse one side')
+   ('3989c19c', '288', '162', 'NOT_EQUIVALENT: expressions differ')
+   ('0fbb367f', '60 seconds.', '65', 'PARSE_ERROR: could not parse one side')
+   ('86c8ac49', 'CD = √(57 + 2√782) and CD = √(57 - 2√782).', '\\sqrt{34} \\pm \\sqrt{23}', 'PARSE_ERROR: could not parse one side')
+   ('02210d1d', '(1,1,1).', '\\text{None}', 'PARSE_ERROR: could not parse one side')
+   ('de84f9bd', '⌊n√2⌋ + 1', '\\lfloor n\\sqrt{2} \\rfloor + 1', 'PARSE_ERROR: could not parse one side')
+   ('73fd2c3d', 'All solutions are (r1,r2,r3,r4)=(a,b,a,b) with a,b', '(1-\\frac{\\sqrt{2}}{2},2-\\frac{\\sqrt{2}}{2}-\\sqrt{4', 'PARSE_ERROR: could not parse one side')
+   ('ccf6f129', 'Number of shelves = 1 + ⌊(m+1)/2⌋⌊(n+1)/2⌋ (equal ', ' \\left\\lfloor \\frac{(m+1)(n+1)}{2} - 1 \\right\\rflo', 'PARSE_ERROR: could not parse one side')
+   ('8bf13a1a', 'Minimum m = ⌈3(n-1)/2⌉', '[\\frac{3n-2}{2}]', 'PARSE_ERROR: could not parse one side')
+   ('5a4079ef', 'F = 4(a+b)r + (π - 4b/h_a)r², with r ≤ h_a/2', '\\( 4(a + b - \\frac{a^2}{h_a}) + \\pi r^2 \\)', 'PARSE_ERROR: could not parse one side')

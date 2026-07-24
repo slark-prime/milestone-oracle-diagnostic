@@ -1,0 +1,109 @@
+rollouts: 72 ok=72 err=0
+
+0ad0ce27 canon='125'
+  r0 strict=NOT -> '140^\\circ'
+  r1 strict=NOT -> '70^\\circ'
+  r2 strict=NOT -> '105^\\circ'
+  r3 strict=NOT -> '110^\\circ'
+
+20dfe8b1 canon='C'
+  r0 strict=NOT -> '29'
+  r1 strict=NOT -> '(no boxed)'
+  r2 strict=NOT -> '29'
+  r3 strict=NOT -> '(no boxed)'
+
+29eb7827 canon='(8:4+3)\\cdot7-5'
+  r0 strict=NOT -> '(no boxed)'
+  r1 strict=NOT -> '(no boxed)'
+  r2 strict=NOT -> '(no boxed)'
+  r3 strict=NOT -> '(no boxed)'
+
+2e647bfc canon='\\frac{r^{2}-3}{2}'
+  r0 strict=ACC -> '\\frac{r^2 - 3}{2}'
+  r1 strict=ACC -> '\\frac{r^2 - 3}{2}'
+  r2 strict=NOT -> '\\operatorname{Re}\\left(\\frac{z_1}{z_2} + \\frac{z_2}{z_3} + \\'
+  r3 strict=ACC -> '\\frac{r^2 - 3}{2}'
+
+330cbc5a canon='=2,b=\\frac{1}{4}'
+  r0 strict=ACC -> '\\frac{1}{4}'
+  r1 strict=ACC -> '\\frac{1}{4}'
+  r2 strict=ACC -> '\\frac{1}{4}'
+  r3 strict=ACC -> '\\frac{1}{4}'
+
+40a06b35 canon='n\\neq2^{k}(k\\in{N})'
+  r0 strict=NOT -> '\\text{All } n \\not= 2^k \\text{ for } k \\in \\mathbb{N}'
+  r1 strict=NOT -> 'n \\neq 2^k \\text{ for any } k \\geq 1'
+  r2 strict=NOT -> '\\text{All } n > 1 \\text{ which are not powers of 2}'
+  r3 strict=NOT -> 'n \\ne 2^k'
+
+5ce4a16b canon='n=3, I=\\frac{\\sqrt{3}}{9} \\mathrm{i}'
+  r0 strict=NOT -> '\\frac{i}{3\\sqrt{3}}'
+  r1 strict=NOT -> 'I = \\frac{i}{3\\sqrt{3}}'
+  r2 strict=NOT -> 'I = \\frac{i}{3\\sqrt{3}}'
+  r3 strict=NOT -> '\\frac{i}{3\\sqrt{3}}'
+
+60f12f06 canon='C'
+  r0 strict=NOT -> '\\text{(C) } y = -\\cos x \\quad (0 \\leq x \\leq \\pi)'
+  r1 strict=ACC -> '\\text{C}'
+  r2 strict=NOT -> '\\text{(C) } y = -\\cos x\\ (0 \\leq x \\leq \\pi)'
+  r3 strict=NOT -> '\\text{(C) } y = -\\cos x \\quad (0 \\leq x \\leq \\pi)'
+
+713ff8c1 canon='48884'
+  r0 strict=NOT -> '49894'
+  r1 strict=NOT -> '49894'
+  r2 strict=NOT -> '49894'
+  r3 strict=NOT -> '49894'
+
+723ca360 canon='f(x)=x^3+cx'
+  r0 strict=ACC -> 'f(x) = x^3 + Cx \\quad \\text{for some constant } C \\in \\mathb'
+  r1 strict=NOT -> 'f(t) = t^3'
+  r2 strict=ACC -> 'f(x) = x^3 + Cx'
+  r3 strict=ACC -> 'f(x) = x^3 + Cx'
+
+a0146340 canon='(x,y,z)=(\\sqrt{7},\\sqrt{7},0)'
+  r0 strict=ACC -> '(\\sqrt{7}, \\sqrt{7}, 0)'
+  r1 strict=ACC -> '(x, y, z) = (\\sqrt{7}, \\sqrt{7}, 0)'
+  r2 strict=ACC -> '(x, y, z) = (\\sqrt{7}, \\sqrt{7}, 0)'
+  r3 strict=ACC -> '(\\sqrt{7}, \\sqrt{7}, 0)'
+
+a0759695 canon='\\frac{56\\pi}{15}'
+  r0 strict=NOT -> '\\frac{\\pi}{30}'
+  r1 strict=NOT -> '0'
+  r2 strict=NOT -> '\\frac{\\pi}{30}'
+  r3 strict=NOT -> '\\frac{\\pi}{30}'
+
+a3a636a8 canon='\\leqslant-2'
+  r0 strict=NOT -> '(-\\infty, -2]'
+  r1 strict=NOT -> '(-\\infty, -2]'
+  r2 strict=NOT -> 'a \\le -2'
+  r3 strict=NOT -> '(-\\infty, -2]'
+
+ad098d0c canon='\\frac{3 \\sqrt{2}}{4}'
+  r0 strict=NOT -> 'x = \\frac{\\pi}{3} + k\\pi'
+  r1 strict=NOT -> 'x = \\frac{\\pi}{3} + k\\pi, \\quad k \\in \\mathbb{Z}'
+  r2 strict=NOT -> 'x = \\frac{\\pi}{3} + k\\pi, \\quad k \\in \\mathbb{Z}'
+  r3 strict=NOT -> 'x = \\frac{\\pi}{3} + k\\pi, \\quad k \\in \\mathbb{Z}'
+
+c52e7627 canon='x_{1}=\\frac{15}{2},y_{1}=\\frac{25}{2}'
+  r0 strict=NOT -> '(x, y) = (7.5, 12.5) \\quad \\text{or} \\quad (1.5, 0.5)'
+  r1 strict=NOT -> '(x, y) = \\left(\\frac{15}{2}, \\frac{25}{2}\\right) \\text{ or }'
+  r2 strict=NOT -> '(x, y) = (1.5, 0.5)'
+  r3 strict=NOT -> '(x, y) = (7.5, 12.5) \\quad \\text{or} \\quad (1.5, 0.5)'
+
+cb760e44 canon='\\frac{1}{\\operatorname{ch}^{3}x}'
+  r0 strict=NOT -> "y' = \\frac{\\operatorname{ch}^2 x - \\operatorname{sh}^2 x}{\\o"
+  r1 strict=NOT -> "y' = \\frac{1}{\\operatorname{ch}^3 x}"
+  r2 strict=NOT -> "y' = \\frac{1}{\\operatorname{ch}^3 x}"
+  r3 strict=NOT -> '\\frac{\\operatorname{ch}^2 x - \\operatorname{sh}^2 x}{\\operat'
+
+eeab310c canon='c=\\frac{a+b}{2}'
+  r0 strict=ACC -> '\\text{(D)}\\ c = \\frac{a + b}{2}'
+  r1 strict=ACC -> '\\text{(D) } c = \\frac{a + b}{2}'
+  r2 strict=ACC -> '\\text{(D) } c = \\frac{a + b}{2}'
+  r3 strict=ACC -> 'c = \\frac{a + b}{2}'
+
+ff548f26 canon='\\frac{19}{4}'
+  r0 strict=NOT -> '5'
+  r1 strict=NOT -> '\\frac{65}{4}'
+  r2 strict=NOT -> '\\frac{65}{4}'
+  r3 strict=NOT -> '5'

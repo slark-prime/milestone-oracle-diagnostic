@@ -1,0 +1,15 @@
+{
+  "judge_model": "openai/gpt-5.5",
+  "correction": "v2: brace-balanced salvage of PARSE_FAIL rows; strict recomputed on the same 12K-char tail the judge saw",
+  "n_paired": 997,
+  "salvaged_parse_fail": 10,
+  "unsalvageable": 0,
+  "api_error_rows_excluded": 3,
+  "strict_tail_vs_full_label_changes": 31,
+  "both_accept": 167,
+  "both_not_accept": 702,
+  "judge_accept_strict_reject": 127,
+  "judge_reject_strict_accept": 1,
+  "over_accept_rate": 0.1274,
+  "under_accept_rate": 0.001
+}

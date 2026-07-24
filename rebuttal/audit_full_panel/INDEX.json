@@ -1,0 +1,93 @@
+{
+  "source_dir": "data/logs/rl/audit_composition_gap",
+  "rubric": "docs/cross_model_audit_prompt.md",
+  "rater": "neutral_rater",
+  "n_models": 6,
+  "total_entries": 906,
+  "models": [
+    {
+      "slug": "qwen3_8b_pre_rl",
+      "label": "Qwen-base",
+      "n_total": 173,
+      "category_counts": {
+        "GENUINE_COMPOSITION": 0,
+        "DECOMPOSITION_INCOMPLETE": 130,
+        "VERIFIER_ARTIFACT": 43,
+        "NOT_STANDALONE": 0,
+        "BEYOND_CAPABILITY": 0
+      },
+      "genuine_composition_fraction": 0.0,
+      "low_confidence_count": 0
+    },
+    {
+      "slug": "base_2k_step_180",
+      "label": "OutcomeRL-2K",
+      "n_total": 155,
+      "category_counts": {
+        "GENUINE_COMPOSITION": 0,
+        "DECOMPOSITION_INCOMPLETE": 116,
+        "VERIFIER_ARTIFACT": 39,
+        "NOT_STANDALONE": 0,
+        "BEYOND_CAPABILITY": 0
+      },
+      "genuine_composition_fraction": 0.0,
+      "low_confidence_count": 0
+    },
+    {
+      "slug": "mile_2k_step_180",
+      "label": "MilestoneRL-2K",
+      "n_total": 167,
+      "category_counts": {
+        "GENUINE_COMPOSITION": 0,
+        "DECOMPOSITION_INCOMPLETE": 129,
+        "VERIFIER_ARTIFACT": 37,
+        "NOT_STANDALONE": 1,
+        "BEYOND_CAPABILITY": 0
+      },
+      "genuine_composition_fraction": 0.0,
+      "low_confidence_count": 0
+    },
+    {
+      "slug": "gpt_oss_20b",
+      "label": "gpt-oss-20b",
+      "n_total": 120,
+      "category_counts": {
+        "GENUINE_COMPOSITION": 2,
+        "DECOMPOSITION_INCOMPLETE": 85,
+        "VERIFIER_ARTIFACT": 33,
+        "NOT_STANDALONE": 0,
+        "BEYOND_CAPABILITY": 0
+      },
+      "genuine_composition_fraction": 0.016666666666666666,
+      "low_confidence_count": 0
+    },
+    {
+      "slug": "llama_3_3_70b_instruct",
+      "label": "Llama-70B",
+      "n_total": 164,
+      "category_counts": {
+        "GENUINE_COMPOSITION": 1,
+        "DECOMPOSITION_INCOMPLETE": 124,
+        "VERIFIER_ARTIFACT": 38,
+        "NOT_STANDALONE": 1,
+        "BEYOND_CAPABILITY": 0
+      },
+      "genuine_composition_fraction": 0.006097560975609756,
+      "low_confidence_count": 0
+    },
+    {
+      "slug": "deepseek_v3_1",
+      "label": "DeepSeek-V3.1",
+      "n_total": 127,
+      "category_counts": {
+        "GENUINE_COMPOSITION": 4,
+        "DECOMPOSITION_INCOMPLETE": 85,
+        "VERIFIER_ARTIFACT": 37,
+        "NOT_STANDALONE": 1,
+        "BEYOND_CAPABILITY": 0
+      },
+      "genuine_composition_fraction": 0.031496062992125984,
+      "low_confidence_count": 0
+    }
+  ]
+}

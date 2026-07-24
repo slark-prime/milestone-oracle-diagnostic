@@ -1,0 +1,109 @@
+rollouts: 72 ok=72 err=0
+
+0ad0ce27 canon='125'
+  r0 strict=ACC -> '125^{\\circ}'
+  r1 strict=ACC -> '\\,\\angle AMD = 125^{\\circ}\\,'
+  r2 strict=ACC -> '125^{\\circ}'
+  r3 strict=ACC -> '125^{\\circ}'
+
+20dfe8b1 canon='C'
+  r0 strict=NOT -> '29'
+  r1 strict=NOT -> '29'
+  r2 strict=NOT -> '29'
+  r3 strict=NOT -> '29'
+
+29eb7827 canon='(8:4+3)\\cdot7-5'
+  r0 strict=NOT -> '(no boxed)'
+  r1 strict=NOT -> '\\text{divide by 4  \\(\\rightarrow\\) add 3  \\(\\rightarrow\\) mu'
+  r2 strict=NOT -> '(no boxed)'
+  r3 strict=NOT -> '(no boxed)'
+
+2e647bfc canon='\\frac{r^{2}-3}{2}'
+  r0 strict=NOT -> '\\operatorname{Re}\\!\\left(\\frac{z_1}{z_2}+\\frac{z_2}{z_3}+\\fr'
+  r1 strict=NOT -> '\\displaystyle \n\\operatorname{Re}\\!\\left(\\frac{z_{1}}{z_{2}}+'
+  r2 strict=NOT -> '(no boxed)'
+  r3 strict=NOT -> '\\displaystyle \\operatorname{Re}\\!\\left(\\frac{z_{1}}{z_{2}}+\\'
+
+330cbc5a canon='=2,b=\\frac{1}{4}'
+  r0 strict=NOT -> 'a=2,\\qquad b_{\\max}=\\frac14'
+  r1 strict=NOT -> '\\,a_{\\min}=2,\\qquad b_{\\max}=\\tfrac14\\,'
+  r2 strict=NOT -> 'a=2,\\qquad b_{\\max}=\\frac14'
+  r3 strict=NOT -> 'a=2,\\qquad b=\\dfrac14'
+
+40a06b35 canon='n\\neq2^{k}(k\\in{N})'
+  r0 strict=NOT -> '\\text{First player can force a win }\\iff\\ n\\not=2^k\\ (k\\ge 1'
+  r1 strict=NOT -> '\\text{First player wins for all } n>1,\\ n\\neq 2^{k}\\;(k\\ge 1'
+  r2 strict=NOT -> '\\text{The first player can guarantee a win for all }n>1\n\\tex'
+  r3 strict=NOT -> 'n=2^{k}\\;(k\\ge 0)'
+
+5ce4a16b canon='n=3, I=\\frac{\\sqrt{3}}{9} \\mathrm{i}'
+  r0 strict=NOT -> '\\,n=3,\\qquad I=\\dfrac{i}{3\\sqrt3}\\;(=\\dfrac{i\\sqrt3}{9})\\,'
+  r1 strict=NOT -> 'I=\\dfrac{i\\sqrt3}{9}'
+  r2 strict=NOT -> '\\,n=3,\\qquad I=\\displaystyle \\frac{i}{3\\sqrt3}\\,'
+  r3 strict=NOT -> 'I=\\dfrac{i}{3\\sqrt3}'
+
+60f12f06 canon='C'
+  r0 strict=NOT -> '(no boxed)'
+  r1 strict=NOT -> '\\;y=-\\cos x\\quad (0\\le x\\le\\pi)\\;'
+  r2 strict=NOT -> 'y=-\\cos x,\\qquad 0\\le x\\le \\pi '
+  r3 strict=NOT -> '\\text{(C) } \\; y=-\\cos x \\quad (0\\le x\\le\\pi)'
+
+713ff8c1 canon='48884'
+  r0 strict=NOT -> '49894'
+  r1 strict=NOT -> '49894'
+  r2 strict=NOT -> '(no boxed)'
+  r3 strict=NOT -> '(no boxed)'
+
+723ca360 canon='f(x)=x^3+cx'
+  r0 strict=NOT -> '\\,f(x)=x^{3}+cx\\qquad (c\\in\\mathbb R)\\,'
+  r1 strict=NOT -> '\\,f(x)=x^{3}+Cx\\quad (x\\in\\mathbb R),\\; C\\in\\mathbb R\\, '
+  r2 strict=NOT -> 'f(x)=x^{3}+c\\,x\\qquad(c\\in\\mathbb{R}) '
+  r3 strict=NOT -> '\\displaystyle f(x)=x^{3}+c\\,x,\\qquad c\\in\\mathbb R'
+
+a0146340 canon='(x,y,z)=(\\sqrt{7},\\sqrt{7},0)'
+  r0 strict=ACC -> '(x,y,z)=(\\sqrt7,\\;\\sqrt7,\\;0)'
+  r1 strict=ACC -> '(x,y,z)=(\\sqrt7,\\; \\sqrt7,\\; 0)'
+  r2 strict=ACC -> '(x,y,z)=(\\sqrt7,\\;\\sqrt7,\\;0)'
+  r3 strict=ACC -> '(x,y,z)=(\\sqrt7,\\;\\sqrt7,\\;0)'
+
+a0759695 canon='\\frac{56\\pi}{15}'
+  r0 strict=NOT -> '\\displaystyle V_{\\min}= \\frac{16\\pi}{15}'
+  r1 strict=NOT -> '\\displaystyle \\frac{16\\pi}{15}'
+  r2 strict=NOT -> '\\text{Minimum volume}=0\\quad\\text{at}\\ a=-3.'
+  r3 strict=NOT -> '\\,V_{\\min}=\\dfrac{16\\pi}{15}\\,'
+
+a3a636a8 canon='\\leqslant-2'
+  r0 strict=NOT -> '\\,a\\in(-\\infty,-2]\\,'
+  r1 strict=NOT -> '\\,a\\in(-\\infty,-2]\\,'
+  r2 strict=NOT -> '\\{\\,a\\in\\mathbb{R}\\mid a<0,\\;a\\le-2\\,\\}'
+  r3 strict=NOT -> '\\,a\\le -2\\, '
+
+ad098d0c canon='\\frac{3 \\sqrt{2}}{4}'
+  r0 strict=NOT -> '\\displaystyle x=\\frac{\\pi}{3}+k\\pi\\;(k\\in\\mathbb Z)'
+  r1 strict=NOT -> '\\;x=\\frac{\\pi}{3}+\\pi k,\\qquad k\\in\\mathbb Z\\;'
+  r2 strict=NOT -> '\\displaystyle\n\\max y=\\frac{3\\sqrt{2}}{4},\n\\qquad\nx=\\frac{\\pi'
+  r3 strict=NOT -> '\\displaystyle \ny_{\\max}=\\frac{3\\sqrt2}{4}\\quad\\text{at}\\quad'
+
+c52e7627 canon='x_{1}=\\frac{15}{2},y_{1}=\\frac{25}{2}'
+  r0 strict=NOT -> '(x,y)=\\left(\\frac{3}{2},\\,\\frac{1}{2}\\right)\\quad\\text{or}\\q'
+  r1 strict=NOT -> '(x,y)=\\left(\\frac{15}{2},\\,\\frac{25}{2}\\right)\\ \\text{or}\\ \\'
+  r2 strict=NOT -> '(x,y)=\\left(\\frac{3}{2},\\,\\frac{1}{2}\\right)\\quad\\text{or}\\q'
+  r3 strict=NOT -> '(x,y)=\\left(\\frac{15}{2},\\,\\frac{25}{2}\\right)\\ \\text{ or }\\'
+
+cb760e44 canon='\\frac{1}{\\operatorname{ch}^{3}x}'
+  r0 strict=NOT -> "\\,y'=\\dfrac{1}{\\cosh ^3x}\\,"
+  r1 strict=NOT -> "\\,y'=\\dfrac{1}{\\cosh ^3 x}\\,"
+  r2 strict=NOT -> "\\,y'=\\frac{1}{\\cosh^3x}\\,"
+  r3 strict=NOT -> "\\displaystyle y'=\\frac{1}{\\cosh ^3x}\\;=\\;\\operatorname{sech}"
+
+eeab310c canon='c=\\frac{a+b}{2}'
+  r0 strict=ACC -> 'c=\\dfrac{a+b}{2}'
+  r1 strict=ACC -> 'c=\\dfrac{a+b}{2}'
+  r2 strict=ACC -> 'c=\\dfrac{a+b}{2}'
+  r3 strict=ACC -> '\\,c=\\dfrac{a+b}{2}\\,'
+
+ff548f26 canon='\\frac{19}{4}'
+  r0 strict=NOT -> '\\text{Area}= \\frac{19}{4}\\ \\text{square units}'
+  r1 strict=NOT -> '\\displaystyle \\text{Area}= \\frac{19}{4}\\text{ square units}'
+  r2 strict=NOT -> 'S=\\dfrac{65}{4}\\;\\text{square units}'
+  r3 strict=ACC -> '\\displaystyle \\frac{19}{4}\\ \\text{square units}'
