@@ -1,0 +1,54 @@
+{
+  "corpus": "math500",
+  "families": 35,
+  "student": "Qwen/Qwen3-8B",
+  "K": 8,
+  "recovery_by_condition": {
+    "C1_direct": [
+      16,
+      0.457
+    ],
+    "C2_descriptions": [
+      18,
+      0.514
+    ],
+    "C3_gold_answers": [
+      16,
+      0.457
+    ],
+    "C2_random": [
+      12,
+      0.343
+    ],
+    "C2_generic": [
+      16,
+      0.457
+    ],
+    "C3_mismatched": [
+      17,
+      0.486
+    ]
+  },
+  "specificity": {
+    "C2_correct_vs_random": [
+      18,
+      12
+    ],
+    "C2_correct_vs_generic": [
+      18,
+      16
+    ],
+    "C3_gold_vs_mismatched": [
+      16,
+      17
+    ]
+  },
+  "milestone_test_pass": 0,
+  "solved_by_any_probe": 22,
+  "taxonomy": {
+    "ROADMAP_GAP": 6,
+    "MISSING_MILESTONE_OR_CAPABILITY": 13,
+    "DIRECT": 16
+  },
+  "composition_gap_share": 0.0
+}

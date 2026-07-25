@@ -1,0 +1,157 @@
+{
+  "deepseek_v3_1": {
+    "families": 50,
+    "own_roadmap_attained": [
+      134,
+      880,
+      0.1523
+    ],
+    "control_roadmap_attained": [
+      60,
+      904,
+      0.0664
+    ],
+    "specificity_ratio": 2.29,
+    "attainment_by_position": {
+      "0": 0.115,
+      "1": 0.188,
+      "2": 0.188,
+      "3": 0.062
+    },
+    "prefix_run_distribution": {
+      "0/2": 297,
+      "0/3": 41,
+      "1/2": 29,
+      "0/4": 16,
+      "2/2": 10,
+      "3/3": 6,
+      "2/3": 1
+    },
+    "stage0_conditional": {
+      "attained_if_stage0_pass": 0.1766,
+      "attained_if_stage0_fail": 0.0278,
+      "counts": {
+        "s0_pass_attained": 130,
+        "s0_pass_total": 736,
+        "s0_fail_attained": 4,
+        "s0_fail_total": 144
+      }
+    }
+  },
+  "llama_3_3_70b_instruct": {
+    "families": 50,
+    "own_roadmap_attained": [
+      128,
+      880,
+      0.1455
+    ],
+    "control_roadmap_attained": [
+      50,
+      904,
+      0.0553
+    ],
+    "specificity_ratio": 2.63,
+    "attainment_by_position": {
+      "0": 0.16,
+      "1": 0.158,
+      "2": 0.016,
+      "3": 0.0
+    },
+    "prefix_run_distribution": {
+      "0/2": 273,
+      "0/3": 47,
+      "1/2": 41,
+      "2/2": 22,
+      "0/4": 16,
+      "1/3": 1
+    },
+    "stage0_conditional": {
+      "attained_if_stage0_pass": 0.1434,
+      "attained_if_stage0_fail": 0.1719,
+      "counts": {
+        "s0_pass_attained": 117,
+        "s0_pass_total": 816,
+        "s0_fail_attained": 11,
+        "s0_fail_total": 64
+      }
+    }
+  },
+  "mile_2k_step_180": {
+    "families": 50,
+    "own_roadmap_attained": [
+      151,
+      880,
+      0.1716
+    ],
+    "control_roadmap_attained": [
+      76,
+      824,
+      0.0922
+    ],
+    "specificity_ratio": 1.86,
+    "attainment_by_position": {
+      "0": 0.2,
+      "1": 0.168,
+      "2": 0.062,
+      "3": 0.0
+    },
+    "prefix_run_distribution": {
+      "0/2": 260,
+      "0/3": 44,
+      "1/2": 40,
+      "2/2": 36,
+      "0/4": 16,
+      "1/3": 3,
+      "2/3": 1
+    },
+    "stage0_conditional": {
+      "attained_if_stage0_pass": 0.1856,
+      "attained_if_stage0_fail": 0.0139,
+      "counts": {
+        "s0_pass_attained": 150,
+        "s0_pass_total": 808,
+        "s0_fail_attained": 1,
+        "s0_fail_total": 72
+      }
+    }
+  },
+  "qwen3_8b_pre_rl": {
+    "families": 50,
+    "own_roadmap_attained": [
+      120,
+      880,
+      0.1364
+    ],
+    "control_roadmap_attained": [
+      67,
+      920,
+      0.0728
+    ],
+    "specificity_ratio": 1.87,
+    "attainment_by_position": {
+      "0": 0.158,
+      "1": 0.142,
+      "2": 0.0,
+      "3": 0.0
+    },
+    "prefix_run_distribution": {
+      "0/2": 275,
+      "0/3": 46,
+      "1/2": 39,
+      "2/2": 22,
+      "0/4": 16,
+      "2/3": 1,
+      "1/3": 1
+    },
+    "stage0_conditional": {
+      "attained_if_stage0_pass": 0.1456,
+      "attained_if_stage0_fail": 0.0,
+      "counts": {
+        "s0_pass_attained": 120,
+        "s0_pass_total": 824,
+        "s0_fail_attained": 0,
+        "s0_fail_total": 56
+      }
+    }
+  }
+}

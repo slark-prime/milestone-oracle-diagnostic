@@ -1,0 +1,53 @@
+Universe: 354 families from data/logs/rl/diagnostic_multi_families_repaired.jsonl
+Stage 0 source: stage0_panel_16k, threshold τ=1
+
+anchor                     pass_stage0  fail_parent_C1  anchored_subset
+Qwen-base                          306             278              236
+OutcomeRL-2K                       296             248              208
+MilestoneRL-2K                     314             258              226
+gpt-oss-20b                        306             193              165
+Llama-70B                          268             302              230
+DeepSeek-V3.1                      264             211              156
+
+======================================================================
+COMPOSITION-GAP counts per (anchor, prober). Rows omit prober == anchor.
+======================================================================
+anchor / prober            Qwen-base  OutcomeRL-2K  MilestoneRL-   gpt-oss-20b     Llama-70B  DeepSeek-V3.
+Qwen-base                   ---                140           152           102           142            99
+OutcomeRL-2K                     144      ---                150           100           132           101
+MilestoneRL-2K                   152           145      ---                103           139           104
+gpt-oss-20b                      108           103           114      ---                 97            96
+Llama-70B                        135           123           126            89      ---                 91
+DeepSeek-V3.1                    103           100           106            86            96      ---     
+
+======================================================================
+RANK STABILITY: rank of each prober (1=most composition gaps), per anchor
+======================================================================
+anchor                     Qwen-base  OutcomeRL-2K  MilestoneRL-   gpt-oss-20b     Llama-70B  DeepSeek-V3.
+Qwen-base                   ---            #3             #1             #4             #2             #5      
+OutcomeRL-2K                 #2            ---            #1             #5             #3             #4      
+MilestoneRL-2K               #1             #2            ---            #5             #3             #4      
+gpt-oss-20b                  #2             #3             #1            ---            #4             #5      
+Llama-70B                    #1             #3             #2             #5            ---            #4      
+DeepSeek-V3.1                #2             #3             #1             #5             #4            ---     
+
+======================================================================
+Kendall's tau between anchor rank lists (1.0 = identical, -1.0 = reversed)
+Computed on the 4 probers each pair has in common.
+======================================================================
+                           Qwen-base  OutcomeRL-2K  MilestoneRL-   gpt-oss-20b     Llama-70B  DeepSeek-V3.
+Qwen-base                   1.00         +0.67         +0.33         +0.67         +0.67         +0.67    
+OutcomeRL-2K               +0.67          1.00         +1.00         +1.00         +0.67         +1.00    
+MilestoneRL-2K             +0.33         +1.00          1.00         +1.00         +1.00         +1.00    
+gpt-oss-20b                +0.67         +1.00         +1.00          1.00         +0.67         +1.00    
+Llama-70B                  +0.67         +0.67         +1.00         +0.67          1.00         +0.67    
+DeepSeek-V3.1              +0.67         +1.00         +1.00         +1.00         +0.67          1.00    
+
+======================================================================
+HEADLINE
+======================================================================
+  Pairwise anchor agreement (Kendall's τ on prober ranks): mean = +0.800
+  Fraction of anchor-pairs with positive agreement (τ > 0): 100%
+  → If mean τ is high (>0.5) and fraction > 80%, the cross-model
+    failure-shape comparison is anchor-invariant in rank order.
+

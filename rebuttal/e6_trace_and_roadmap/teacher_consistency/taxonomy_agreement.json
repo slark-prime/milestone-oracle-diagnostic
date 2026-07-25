@@ -1,0 +1,213 @@
+{
+  "n_families": 39,
+  "taxonomy_agreement": [
+    22,
+    0.564
+  ],
+  "confusion": {
+    "DIRECT -> DIRECT": 22,
+    "COMPOSITION_GAP -> MISSING_MILESTONE_OR_CAPABILITY": 11,
+    "ROADMAP_GAP -> DIRECT": 2,
+    "ROADMAP_GAP -> MISSING_MILESTONE_OR_CAPABILITY": 1,
+    "ROADMAP_GAP -> COMPOSITION_GAP": 1,
+    "MISSING_MILESTONE_OR_CAPABILITY -> DIRECT": 1,
+    "COMPOSITION_GAP -> ROADMAP_GAP": 1
+  },
+  "per_family": [
+    {
+      "pid": "20dfe8b1-e900-4098-8143-f8351b4f7197",
+      "submission_roadmap": "DIRECT",
+      "alt_roadmap": "DIRECT"
+    },
+    {
+      "pid": "b36a1161-390a-4c97-9b80-3af6f6fcf6ff",
+      "submission_roadmap": "COMPOSITION_GAP",
+      "alt_roadmap": "MISSING_MILESTONE_OR_CAPABILITY"
+    },
+    {
+      "pid": "70933ddd-cfb2-4bd1-a2d6-a06463035daa",
+      "submission_roadmap": "DIRECT",
+      "alt_roadmap": "DIRECT"
+    },
+    {
+      "pid": "6553b443-2fc3-49fd-bd43-c280c391b565",
+      "submission_roadmap": "DIRECT",
+      "alt_roadmap": "DIRECT"
+    },
+    {
+      "pid": "f8a3e468-191f-474b-9353-04d5d1e32347",
+      "submission_roadmap": "DIRECT",
+      "alt_roadmap": "DIRECT"
+    },
+    {
+      "pid": "1bacd56b-d875-44e2-92b4-780f2daa96b1",
+      "submission_roadmap": "DIRECT",
+      "alt_roadmap": "DIRECT"
+    },
+    {
+      "pid": "643994b5-96af-4b39-b0c1-5b8e7995aa4e",
+      "submission_roadmap": "DIRECT",
+      "alt_roadmap": "DIRECT"
+    },
+    {
+      "pid": "e8934cce-72fe-48b4-8447-0089a1562ffb",
+      "submission_roadmap": "DIRECT",
+      "alt_roadmap": "DIRECT"
+    },
+    {
+      "pid": "3e0c9a04-85ac-4219-8096-1c424a50828c",
+      "submission_roadmap": "COMPOSITION_GAP",
+      "alt_roadmap": "MISSING_MILESTONE_OR_CAPABILITY"
+    },
+    {
+      "pid": "9381ce52-3345-400d-a72e-e6a4ca448b09",
+      "submission_roadmap": "COMPOSITION_GAP",
+      "alt_roadmap": "MISSING_MILESTONE_OR_CAPABILITY"
+    },
+    {
+      "pid": "372837c3-d050-4a9d-9101-bf6ddf857f8f",
+      "submission_roadmap": "DIRECT",
+      "alt_roadmap": "DIRECT"
+    },
+    {
+      "pid": "a81a70ce-e62e-4bf1-801b-ee1d94c58dd0",
+      "submission_roadmap": "ROADMAP_GAP",
+      "alt_roadmap": "MISSING_MILESTONE_OR_CAPABILITY"
+    },
+    {
+      "pid": "e0e93ee4-4156-4ac3-92fb-82d8b2b6cde3",
+      "submission_roadmap": "ROADMAP_GAP",
+      "alt_roadmap": "COMPOSITION_GAP"
+    },
+    {
+      "pid": "4f862339-cabb-4b91-909e-a61b0d8c34d6",
+      "submission_roadmap": "COMPOSITION_GAP",
+      "alt_roadmap": "MISSING_MILESTONE_OR_CAPABILITY"
+    },
+    {
+      "pid": "9af3ab3b-5dac-478e-867b-c1fface87836",
+      "submission_roadmap": "DIRECT",
+      "alt_roadmap": "DIRECT"
+    },
+    {
+      "pid": "5cf6d4d9-ba10-4d66-96f4-ca128db67e84",
+      "submission_roadmap": "DIRECT",
+      "alt_roadmap": "DIRECT"
+    },
+    {
+      "pid": "363e3233-b4af-4b65-b296-b67ffb3dcdfd",
+      "submission_roadmap": "DIRECT",
+      "alt_roadmap": "DIRECT"
+    },
+    {
+      "pid": "97cebd32-fc06-40b0-9429-5e1cec89e6bc",
+      "submission_roadmap": "DIRECT",
+      "alt_roadmap": "DIRECT"
+    },
+    {
+      "pid": "f3cf1979-6bb0-49c9-923d-bedfcc58d0db",
+      "submission_roadmap": "COMPOSITION_GAP",
+      "alt_roadmap": "MISSING_MILESTONE_OR_CAPABILITY"
+    },
+    {
+      "pid": "15d38f7a-e00c-4ca6-bcbd-db3dd40f99d0",
+      "submission_roadmap": "DIRECT",
+      "alt_roadmap": "DIRECT"
+    },
+    {
+      "pid": "30de45ff-0c7a-45b5-969a-894f6ab9ac2c",
+      "submission_roadmap": "DIRECT",
+      "alt_roadmap": "DIRECT"
+    },
+    {
+      "pid": "cdfc31d2-3187-4828-9eda-28b8633abac0",
+      "submission_roadmap": "COMPOSITION_GAP",
+      "alt_roadmap": "MISSING_MILESTONE_OR_CAPABILITY"
+    },
+    {
+      "pid": "90681d2e-428d-46e0-a6af-213a992b7caa",
+      "submission_roadmap": "DIRECT",
+      "alt_roadmap": "DIRECT"
+    },
+    {
+      "pid": "c52e7627-1521-49a3-937b-e10869b60336",
+      "submission_roadmap": "MISSING_MILESTONE_OR_CAPABILITY",
+      "alt_roadmap": "DIRECT"
+    },
+    {
+      "pid": "41348e33-539b-4723-b16d-8366ed2b0c14",
+      "submission_roadmap": "COMPOSITION_GAP",
+      "alt_roadmap": "MISSING_MILESTONE_OR_CAPABILITY"
+    },
+    {
+      "pid": "cbf7f26f-0c7c-490a-8dd0-80a3d6553f76",
+      "submission_roadmap": "DIRECT",
+      "alt_roadmap": "DIRECT"
+    },
+    {
+      "pid": "395a5237-a997-46a6-bbc6-d3cea90d2fa1",
+      "submission_roadmap": "DIRECT",
+      "alt_roadmap": "DIRECT"
+    },
+    {
+      "pid": "40a06b35-5c35-4c91-83b6-b2cb34e836f4",
+      "submission_roadmap": "COMPOSITION_GAP",
+      "alt_roadmap": "MISSING_MILESTONE_OR_CAPABILITY"
+    },
+    {
+      "pid": "becc582f-4242-4e5c-8997-b51d2bbcf9ae",
+      "submission_roadmap": "DIRECT",
+      "alt_roadmap": "DIRECT"
+    },
+    {
+      "pid": "d6d28e39-7bcc-49ad-a686-134122bd613a",
+      "submission_roadmap": "ROADMAP_GAP",
+      "alt_roadmap": "DIRECT"
+    },
+    {
+      "pid": "0ad0ce27-fd66-4468-b84f-4cc829a265a3",
+      "submission_roadmap": "DIRECT",
+      "alt_roadmap": "DIRECT"
+    },
+    {
+      "pid": "a171965e-dd6a-4e6a-be42-b9ff17a379df",
+      "submission_roadmap": "COMPOSITION_GAP",
+      "alt_roadmap": "MISSING_MILESTONE_OR_CAPABILITY"
+    },
+    {
+      "pid": "1080b8d3-e9c9-47de-86a8-9f38a2ced9bd",
+      "submission_roadmap": "DIRECT",
+      "alt_roadmap": "DIRECT"
+    },
+    {
+      "pid": "cccd8823-2b19-44e1-8d7a-0e642a503bfa",
+      "submission_roadmap": "DIRECT",
+      "alt_roadmap": "DIRECT"
+    },
+    {
+      "pid": "2f9b03c6-ce71-4a93-8789-57936c50ef81",
+      "submission_roadmap": "COMPOSITION_GAP",
+      "alt_roadmap": "MISSING_MILESTONE_OR_CAPABILITY"
+    },
+    {
+      "pid": "79018583-0e74-4120-b0a4-87712e10b820",
+      "submission_roadmap": "DIRECT",
+      "alt_roadmap": "DIRECT"
+    },
+    {
+      "pid": "29b43b6e-3825-4445-852b-918ed964d587",
+      "submission_roadmap": "COMPOSITION_GAP",
+      "alt_roadmap": "ROADMAP_GAP"
+    },
+    {
+      "pid": "1542425b-d6f5-48e8-b8d2-bf77c90b305a",
+      "submission_roadmap": "ROADMAP_GAP",
+      "alt_roadmap": "DIRECT"
+    },
+    {
+      "pid": "5a4079ef-01f1-4e45-8482-cb38d6678eb4",
+      "submission_roadmap": "COMPOSITION_GAP",
+      "alt_roadmap": "MISSING_MILESTONE_OR_CAPABILITY"
+    }
+  ]
+}

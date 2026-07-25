@@ -10,8 +10,14 @@ unless stated in the response text.
 | `e2_teacher_consistency/` | Second-teacher (Inkling) packets for 60 sampled families (`inkling_packets.jsonl`), C2/C3 re-probe on the same student (`inkling_c2c3_gpt_oss_20b.jsonl`), structural comparison | global (AC-Q2), i227 Q5, FWVb W1, Qf6B W3 |
 | `e3_multi_anchor/` | Multi-anchor re-filtering with the 16K Stage-0 source: full count/rank/tau tables | global (AC-Q1), i227 Q3, Qf6B W2 |
 | `e4_frontier_judge/` | gpt-5.5 paired verifier audit, n=997 (`paired_gpt_5_5_v2.jsonl`, summary) | FWVb W2 |
+| `e5_crossdomain_code/` | Protocol re-instantiated on code generation (LiveCodeBench), graded by test execution: C1/C2/C3 arms at K=8 plus helper-level parts test and the compile-verified packets | global (AC-Q1) |
+| `e6_trace_and_roadmap/` | Milestone attainment in the students' own unaided traces; atomic-gold few-shot that made an independent roadmap gradable; five-way taxonomy agreement against that roadmap | global (AC-Q2), FWVb W1/Q2 |
+| `e7_second_corpus/` | Full protocol on MATH500 and AIME 2024/2025 (screen -> decompose -> Stage 0 -> six probe conditions, K=8), plus the controlled granularity ablation | global (AC-Q1), i227 Q3/W6, Qf6B W1/Q1 |
 | `audit_full_panel/` | Rubric-based residual labels for all six panel models (906 family-labels) with rubric summary; see i227 Q4 response for the disclosed limitation of its decomposition-vs-composition axis | i227 Q1/Q4 |
 | `scripts/` | The exact scripts that produced the above | all |
 
 Grading conventions: recovery threshold >=1/8 unless stated; strict symbolic cascade as in the
 paper; E1 additionally hand-graded against independently verified answers (summaries included).
+
+Code-domain caveat: the corruption controls (C2-random / C2-generic / C3-mismatched) were **not** run in
+`e5_crossdomain_code/`; the C1 arm there is a K=8 probe, distinct from the k=4 screen used for selection.

@@ -1,0 +1,56 @@
+{
+  "corpus": "aime",
+  "families": 38,
+  "student": "Qwen/Qwen3-8B",
+  "K": 8,
+  "recovery_by_condition": {
+    "C1_direct": [
+      2,
+      0.053
+    ],
+    "C2_descriptions": [
+      17,
+      0.447
+    ],
+    "C3_gold_answers": [
+      15,
+      0.395
+    ],
+    "C2_random": [
+      5,
+      0.132
+    ],
+    "C2_generic": [
+      5,
+      0.132
+    ],
+    "C3_mismatched": [
+      14,
+      0.368
+    ]
+  },
+  "specificity": {
+    "C2_correct_vs_random": [
+      17,
+      5
+    ],
+    "C2_correct_vs_generic": [
+      17,
+      5
+    ],
+    "C3_gold_vs_mismatched": [
+      15,
+      14
+    ]
+  },
+  "milestone_test_pass": 1,
+  "solved_by_any_probe": 18,
+  "taxonomy": {
+    "DIRECT": 2,
+    "ROADMAP_GAP": 15,
+    "MISSING_MILESTONE_OR_CAPABILITY": 19,
+    "MILESTONE_EXECUTION_GAP": 1,
+    "COMPOSITION_GAP": 1
+  },
+  "composition_gap_share": 0.026
+}
