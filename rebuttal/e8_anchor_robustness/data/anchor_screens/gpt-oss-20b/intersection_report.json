@@ -1,0 +1,46 @@
+{
+  "math500": {
+    "second_anchor": "gpt-oss-20b",
+    "threshold": ">=3/8",
+    "probed_families": 35,
+    "second_anchor_failed_of_probed": 4,
+    "recovery_at_threshold": {
+      "C1_direct": 1,
+      "C2_descriptions": 1,
+      "C2_random": 1,
+      "C2_generic": 1,
+      "C3_gold_answers": 1,
+      "C3_mismatched": 1
+    },
+    "recovery_at_1of8": {
+      "C1_direct": 1,
+      "C2_descriptions": 1,
+      "C2_random": 1,
+      "C2_generic": 1,
+      "C3_gold_answers": 1,
+      "C3_mismatched": 1
+    }
+  },
+  "aime": {
+    "second_anchor": "gpt-oss-20b",
+    "threshold": ">=1/8",
+    "probed_families": 38,
+    "second_anchor_failed_of_probed": 9,
+    "recovery_at_threshold": {
+      "C1_direct": 0,
+      "C2_descriptions": 1,
+      "C2_random": 0,
+      "C2_generic": 1,
+      "C3_gold_answers": 1,
+      "C3_mismatched": 1
+    },
+    "recovery_at_1of8": {
+      "C1_direct": 0,
+      "C2_descriptions": 1,
+      "C2_random": 0,
+      "C2_generic": 1,
+      "C3_gold_answers": 1,
+      "C3_mismatched": 1
+    }
+  }
+}
