@@ -1,0 +1,41 @@
+{
+  "all": {
+    "agree": 22,
+    "n": 39,
+    "confusion": {
+      "DIRECT -> DIRECT": 22,
+      "COMPOSITION_GAP -> MISSING": 11,
+      "ROADMAP_GAP -> DIRECT": 2,
+      "ROADMAP_GAP -> MISSING": 1,
+      "ROADMAP_GAP -> COMPOSITION_GAP": 1,
+      "MISSING -> DIRECT": 1,
+      "COMPOSITION_GAP -> ROADMAP_GAP": 1
+    }
+  },
+  "frac>=2/3": {
+    "agree": 25,
+    "n": 39,
+    "confusion": {
+      "DIRECT -> DIRECT": 22,
+      "COMPOSITION_GAP -> MISSING": 8,
+      "COMPOSITION_GAP -> COMPOSITION_GAP": 3,
+      "ROADMAP_GAP -> COMPOSITION_GAP": 2,
+      "ROADMAP_GAP -> DIRECT": 2,
+      "MISSING -> DIRECT": 1,
+      "COMPOSITION_GAP -> ROADMAP_GAP": 1
+    }
+  },
+  "frac>=1/2": {
+    "agree": 29,
+    "n": 39,
+    "confusion": {
+      "DIRECT -> DIRECT": 22,
+      "COMPOSITION_GAP -> COMPOSITION_GAP": 7,
+      "COMPOSITION_GAP -> MISSING": 4,
+      "ROADMAP_GAP -> COMPOSITION_GAP": 2,
+      "ROADMAP_GAP -> DIRECT": 2,
+      "COMPOSITION_GAP -> DIRECT": 1,
+      "COMPOSITION_GAP -> ROADMAP_GAP": 1
+    }
+  }
+}

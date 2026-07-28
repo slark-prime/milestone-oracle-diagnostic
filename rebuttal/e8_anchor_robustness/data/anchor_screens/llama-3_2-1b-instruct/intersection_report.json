@@ -1,0 +1,46 @@
+{
+  "math500": {
+    "second_anchor": "llama-3_2-1b-instruct",
+    "threshold": ">=3/8",
+    "probed_families": 35,
+    "second_anchor_failed_of_probed": 33,
+    "recovery_at_threshold": {
+      "C1_direct": 3,
+      "C2_descriptions": 15,
+      "C2_random": 2,
+      "C2_generic": 2,
+      "C3_gold_answers": 15,
+      "C3_mismatched": 13
+    },
+    "recovery_at_1of8": {
+      "C1_direct": 16,
+      "C2_descriptions": 18,
+      "C2_random": 12,
+      "C2_generic": 16,
+      "C3_gold_answers": 16,
+      "C3_mismatched": 17
+    }
+  },
+  "aime": {
+    "second_anchor": "llama-3_2-1b-instruct",
+    "threshold": ">=1/8",
+    "probed_families": 38,
+    "second_anchor_failed_of_probed": 38,
+    "recovery_at_threshold": {
+      "C1_direct": 2,
+      "C2_descriptions": 17,
+      "C2_random": 5,
+      "C2_generic": 5,
+      "C3_gold_answers": 15,
+      "C3_mismatched": 14
+    },
+    "recovery_at_1of8": {
+      "C1_direct": 2,
+      "C2_descriptions": 17,
+      "C2_random": 5,
+      "C2_generic": 5,
+      "C3_gold_answers": 15,
+      "C3_mismatched": 14
+    }
+  }
+}

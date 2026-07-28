@@ -30,3 +30,23 @@ Candidate anchors ruled out by the 30-problem pilot (`data/anchor_pilot/`):
   doubly-failed families are largely beyond the 8B student under every
   condition, consistent with CAPABILITY-GAP dominance on harder problems.
 - `scripts/` — pilot, screen, and intersection analysis, runnable against e7.
+
+## Update: a weak non-Qwen anchor completes the ladder
+
+Llama-3.2-1B-Instruct (served via its provider's chat template; instruct-tuned,
+so format-compliant unlike the base 3B) screens with the same fail-all-4 rule:
+
+| Anchor | MATH500 anchor-failed | AIME anchor-failed |
+|---|---:|---:|
+| Llama-3.2-1B-Instruct | 345/500 (69%) | 58/60 (97%) |
+| Qwen3-8B (suite anchor; e7) | 36/500 (7%) | 38/60 (63%) |
+| gpt-oss-20b | 5/500 (1%) | 10/60 (17%) |
+
+Its failure set contains every e7-probed family (38/38 AIME, 35/35 MATH500), and
+the six-condition recovery on that set is unchanged from e7's tables (AIME at
+pass@8: C1 2, C2 17, C2-random 5, C2-generic 5, C3 15, C3-mismatched 14). See
+`data/anchor_screens/llama-3_2-1b-instruct/intersection_report.json`. Candidate
+pilots for Gemma-3-27B (57/60 solved: too strong) and Mistral-Nemo-12B (ideal
+profile, over the size cap) are in `data/anchor_pilot/prime_*.jsonl`; the
+Prime-served Llama-3.2-3B-Instruct endpoint returns truncated generations
+(finish_reason=error) and could not be used.
