@@ -1,0 +1,66 @@
+{
+  "deepseek_v3_1": {
+    "correct": {
+      "rollouts": 81,
+      "attainment": 0.12,
+      "coincidence": 0.0442,
+      "m": "21/175",
+      "c": "8/181"
+    },
+    "failed": {
+      "rollouts": 319,
+      "attainment": 0.1603,
+      "coincidence": 0.0807,
+      "m": "113/705",
+      "c": "57/706"
+    }
+  },
+  "llama_3_3_70b_instruct": {
+    "correct": {
+      "rollouts": 17,
+      "attainment": 0.1471,
+      "coincidence": 0.1143,
+      "m": "5/34",
+      "c": "4/35"
+    },
+    "failed": {
+      "rollouts": 383,
+      "attainment": 0.1454,
+      "coincidence": 0.0656,
+      "m": "123/846",
+      "c": "55/838"
+    }
+  },
+  "mile_2k_step_180": {
+    "correct": {
+      "rollouts": 35,
+      "attainment": 0.2297,
+      "coincidence": 0.1139,
+      "m": "17/74",
+      "c": "9/79"
+    },
+    "failed": {
+      "rollouts": 365,
+      "attainment": 0.1663,
+      "coincidence": 0.061,
+      "m": "134/806",
+      "c": "50/820"
+    }
+  },
+  "qwen3_8b_pre_rl": {
+    "correct": {
+      "rollouts": 18,
+      "attainment": 0.1842,
+      "coincidence": 0.1277,
+      "m": "7/38",
+      "c": "6/47"
+    },
+    "failed": {
+      "rollouts": 382,
+      "attainment": 0.1342,
+      "coincidence": 0.066,
+      "m": "113/842",
+      "c": "56/848"
+    }
+  }
+}

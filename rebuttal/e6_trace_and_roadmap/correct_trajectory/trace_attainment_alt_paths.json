@@ -1,0 +1,74 @@
+{
+  "deepseek_v3_1": {
+    "correct": {
+      "rollouts": 77,
+      "own": 0.126,
+      "alt": 0.194,
+      "ctl": 0.115,
+      "union_any_rate": 0.597,
+      "ctl_any_rate": 0.403
+    },
+    "failed": {
+      "rollouts": 235,
+      "own": 0.181,
+      "alt": 0.127,
+      "ctl": 0.089,
+      "union_any_rate": 0.613,
+      "ctl_any_rate": 0.306
+    }
+  },
+  "llama_3_3_70b_instruct": {
+    "correct": {
+      "rollouts": 16,
+      "own": 0.156,
+      "alt": 0.134,
+      "ctl": 0.059,
+      "union_any_rate": 0.875,
+      "ctl_any_rate": 0.125
+    },
+    "failed": {
+      "rollouts": 296,
+      "own": 0.166,
+      "alt": 0.095,
+      "ctl": 0.054,
+      "union_any_rate": 0.571,
+      "ctl_any_rate": 0.236
+    }
+  },
+  "mile_2k_step_180": {
+    "correct": {
+      "rollouts": 30,
+      "own": 0.266,
+      "alt": 0.098,
+      "ctl": 0.077,
+      "union_any_rate": 0.667,
+      "ctl_any_rate": 0.267
+    },
+    "failed": {
+      "rollouts": 282,
+      "own": 0.188,
+      "alt": 0.126,
+      "ctl": 0.059,
+      "union_any_rate": 0.649,
+      "ctl_any_rate": 0.227
+    }
+  },
+  "qwen3_8b_pre_rl": {
+    "correct": {
+      "rollouts": 18,
+      "own": 0.184,
+      "alt": 0.143,
+      "ctl": 0.051,
+      "union_any_rate": 0.778,
+      "ctl_any_rate": 0.167
+    },
+    "failed": {
+      "rollouts": 294,
+      "own": 0.15,
+      "alt": 0.103,
+      "ctl": 0.052,
+      "union_any_rate": 0.568,
+      "ctl_any_rate": 0.252
+    }
+  }
+}
